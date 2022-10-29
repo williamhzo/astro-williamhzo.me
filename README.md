@@ -14,3 +14,5 @@ in no particular order:
 [] /contact page
 [] /projects page
 [] /inspiration page
+[] add a 'things i can do for u' section
+[] article on design tokens in Astro
