@@ -1,0 +1,17 @@
+.card {
+  background: var(--color-dark);
+  color: var(--color-light);
+  padding: var(--space-m-l);
+  border-radius: var(--border-radius);
+  max-width: unset; /* remove constraint from global.css li rule. */
+}
+
+/* .features {
+  // see https://glitch.com/~build-excellent-websites
+  --grid-placement: auto-fit;
+  --grid-min-item-size: clamp(16rem, 33%, 20rem);
+  --gutter: var(--space-l-xl);
+  --flow-space: var(--space-s);
+
+  text-align: center;
+} */

@@ -1,7 +1,6 @@
 ---
 import ThemeIcon from '../components/ThemeIcon.astro';
-import '../styles/reset.css';
-import '../styles/global.css';
+import '../styles/styles.css';
 
 export interface Props {
   title: string;
@@ -25,7 +24,7 @@ const { title } = Astro.props;
       <ThemeIcon />
 
       <nav>
-        <ul>
+        <ul role="list">
           <li>
             <a href="/blog">blog</a>
           </li>

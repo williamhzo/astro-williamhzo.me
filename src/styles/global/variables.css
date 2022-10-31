@@ -1,0 +1,58 @@
+:root {
+  /* Fonts */
+
+  --font-base: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial',
+    sans-serif;
+  --font-weight-base: 500;
+  --font-heading: 'Outfit', var(--font-base);
+  --font-weight-heading: 700;
+
+  --gutter: var(--space-s-m);
+  --border-radius: var(--size-step-1);
+  --border-radius-sm: var(--size-step-0);
+  --transition-base: 250ms ease;
+  --transition-movement: 200ms linear;
+  --transition-fade: 200ms ease;
+  --transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
+  --tracking: -0.05ch;
+  --tracking-s: -0.07ch;
+  --line-height-base: 1.4;
+  --line-height-tight: 1;
+
+  /* Font sizes and space scales generated with Utopia (https://utopia.fyi/): */
+
+  /* Font sizes */
+
+  --size-step--1: clamp(0.8rem, calc(0.84rem + -0.06vw), 0.83rem);
+  --size-step-0: clamp(1rem, calc(0.96rem + 0.19vw), 1.13rem);
+  --size-step-1: clamp(1.2rem, calc(1.08rem + 0.61vw), 1.59rem);
+  --size-step-2: clamp(1.44rem, calc(1.19rem + 1.26vw), 2.25rem);
+  --size-step-3: clamp(1.73rem, calc(1.28rem + 2.26vw), 3.18rem);
+  --size-step-4: clamp(2.07rem, calc(1.32rem + 3.77vw), 4.5rem);
+
+  /* Spacings */
+
+  --space-3xs: clamp(0.25rem, calc(0.23rem + 0.1vw), 0.31rem);
+  --space-2xs: clamp(0.5rem, calc(0.46rem + 0.19vw), 0.63rem);
+  --space-xs: clamp(0.75rem, calc(0.69rem + 0.29vw), 0.94rem);
+  --space-s: clamp(1rem, calc(0.92rem + 0.39vw), 1.25rem);
+  --space-m: clamp(1.5rem, calc(1.38rem + 0.58vw), 1.88rem);
+  --space-l: clamp(2rem, calc(1.84rem + 0.78vw), 2.5rem);
+  --space-xl: clamp(3rem, calc(2.77rem + 1.17vw), 3.75rem);
+  --space-2xl: clamp(4rem, calc(3.69rem + 1.55vw), 5rem);
+  --space-3xl: clamp(6rem, calc(5.53rem + 2.33vw), 7.5rem);
+
+  --space-3xs-2xs: clamp(0.25rem, calc(0.13rem + 0.58vw), 0.63rem);
+  --space-2xs-xs: clamp(0.5rem, calc(0.36rem + 0.68vw), 0.94rem);
+  --space-xs-s: clamp(0.75rem, calc(0.59rem + 0.78vw), 1.25rem);
+  --space-s-m: clamp(1rem, calc(0.73rem + 1.36vw), 1.88rem);
+  --space-m-l: clamp(1.5rem, calc(1.19rem + 1.55vw), 2.5rem);
+  --space-l-xl: clamp(2rem, calc(1.46rem + 2.72vw), 3.75rem);
+  --space-xl-2xl: clamp(3rem, calc(2.38rem + 3.11vw), 5rem);
+  --space-2xl-3xl: clamp(4rem, calc(2.91rem + 5.44vw), 7.5rem);
+
+  /* Colors */
+  --color-base-light: hsl(0, 0%, 95%);
+  --color-base-dark: hsl(209, 72.9%, 11.6%);
+  /* --color-brand: hsl(359, 76%, 72%); */
+}

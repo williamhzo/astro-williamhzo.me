@@ -8,8 +8,8 @@ in no particular order:
 [] add all head meta tags (SEO, OG, a11y, etc)
 [] write a damn blog post (been procrastinating this one for a while)
 [] add design tokens
-[] add 'Outfit' font-family (sans) for headings
-[] add 'Inter' font-family (sans) for body
+[x] add 'Outfit' font-family (sans) for headings
+[x] add 'Inter' font-family (sans) for body
 [] find and add serif font
 [] find and add mono font
 [] /contact page

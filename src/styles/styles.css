@@ -1,0 +1,10 @@
+@import '../styles/global/reset.css';
+@import '../styles/global/global.css';
+@import '../styles/global/variables.css';
+
+@import '../styles/global/fonts.css';
+
+@import '../styles/composition/composition.css';
+@import '../styles/utilities/utilities.css';
+@import '../styles/blocks/blocks.css';
+@import '../styles/exceptions/exceptions.css';
