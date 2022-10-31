@@ -21,7 +21,54 @@ const { title } = Astro.props;
   </head>
 
   <body>
-    <ThemeIcon />
+    <header>
+      <ThemeIcon />
+
+      <nav>
+        <ul>
+          <li>
+            <a href="/blog">blog</a>
+          </li>
+
+          <li>
+            <a href="/inspiration">inspiration</a>
+          </li>
+
+          <li>
+            <a
+              href="https://github.com/williamhzo"
+              target="_blank"
+              rel="noreferrer"
+            >
+              github
+              <span class="sr-only">Github external link</span>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://twitter.com/williamhzo"
+              target="_blank"
+              rel="noreferrer"
+            >
+              twitter
+              <span class="sr-only">Twitter external link</span>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://www.linkedin.com/in/williamhermozo/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              linkedin
+              <span class="sr-only">Linkedin external link</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <slot />
 
