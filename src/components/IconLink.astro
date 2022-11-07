@@ -1,0 +1,13 @@
+---
+export interface Props {
+  label: string;
+  href: string;
+}
+
+const { label, href } = Astro.props;
+---
+
+<a href={href} target="_blank" rel="noreferrer">
+  <slot />
+  <span class="sr-only">{label} link</span>
+</a>

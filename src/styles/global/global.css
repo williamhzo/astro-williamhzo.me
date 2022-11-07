@@ -1,9 +1,11 @@
 body {
   font-family: var(--font-base);
+  font-size: var(--size-step-1);
   font-weight: var(--font-weight-base);
   line-height: var(--line-height-base);
-  background-color: var(--color-base-light);
+  background: var(--color-base-light);
   color: var(--color-base-dark);
+  letter-spacing: var(--tracking);
 }
 
 .dark body {
@@ -36,11 +38,11 @@ h1 {
 }
 
 h2 {
-  font-size: var(--size-step-2);
+  font-size: var(--size-step-3);
 }
 
 h3 {
-  font-size: var(--size-step-1);
+  font-size: var(--size-step-2);
 }
 
 /* Set line lengths */
@@ -95,3 +97,13 @@ a:hover {
 main:focus {
   outline: none;
 }
+
+/* :root {
+        --accent: 124, 58, 237;
+        --accent-gradient: linear-gradient(
+          45deg,
+          rgb(var(--accent)),
+          #da62c4 30%,
+          white 60%
+        );
+      } */
