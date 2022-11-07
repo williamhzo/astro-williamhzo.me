@@ -6,6 +6,7 @@
   --font-weight-base: 500;
   --font-heading: 'Outfit', var(--font-base);
   --font-weight-heading: 700;
+  --measure: 60ch;
 
   --gutter: var(--space-s-m);
   --border-radius: var(--size-step-1);

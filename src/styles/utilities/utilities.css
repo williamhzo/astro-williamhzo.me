@@ -2,6 +2,13 @@
   margin-top: var(--flow-space, 1em);
 }
 
+.wrapper {
+  margin-inline: auto;
+  padding-inline: var(--gutter, 1rem);
+  width: 90vw;
+  width: clamp(16rem, 90vw, 70rem);
+}
+
 .region {
   padding-top: var(--region-space, var(--space-l-2xl));
   padding-bottom: var(--region-space, var(--space-l-2xl));

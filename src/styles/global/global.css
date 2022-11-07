@@ -49,8 +49,11 @@ h3 {
 
 p,
 li,
+h4,
+h5,
+h6,
 blockquote:not([class]) {
-  max-width: 60ch;
+  max-width: var(--measure);
 }
 
 /* Generic elements */
@@ -97,13 +100,3 @@ a:hover {
 main:focus {
   outline: none;
 }
-
-/* :root {
-        --accent: 124, 58, 237;
-        --accent-gradient: linear-gradient(
-          45deg,
-          rgb(var(--accent)),
-          #da62c4 30%,
-          white 60%
-        );
-      } */
