@@ -2,24 +2,26 @@
 import ThemeIcon from '../components/ThemeIcon.astro';
 ---
 
-<header>
-  <nav role="navigation">
-    <ul role="list">
-      <li>
-        <a href="/">home</a>
-      </li>
+<header role="banner" class="site-header">
+  <div class="[ wrapper ] [ repel ]">
+    <ThemeIcon />
 
-      <li>
-        <a href="/blog">blog</a>
-      </li>
+    <nav role="navigation">
+      <ul role="list" class="cluster">
+        <li>
+          <a href="/">home</a>
+        </li>
 
-      <li>
-        <a href="/inspiration">inspiration</a>
-      </li>
-    </ul>
-  </nav>
+        <li>
+          <a href="/blog">blog</a>
+        </li>
 
-  <ThemeIcon />
+        <li>
+          <a href="/inspiration">inspiration</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <style>

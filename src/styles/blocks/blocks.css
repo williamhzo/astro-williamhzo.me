@@ -1,17 +1,47 @@
-.card {
-  background: var(--color-dark);
-  color: var(--color-light);
-  padding: var(--space-m-l);
-  border-radius: var(--border-radius);
-  max-width: unset; /* remove constraint from global.css li rule. */
+/* https://cube.fyi/block.html */
+
+.site-header {
+  padding-block: var(--space-s-m);
 }
 
-/* .features {
-  // see https://glitch.com/~build-excellent-websites
-  --grid-placement: auto-fit;
-  --grid-min-item-size: clamp(16rem, 33%, 20rem);
-  --gutter: var(--space-l-xl);
-  --flow-space: var(--space-s);
+.site-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: var(--space-l-2xl);
+}
 
-  text-align: center;
-} */
+.contact-form {
+  display: grid;
+  gap: var(--gutter);
+  padding-block-start: var(--space-s-m);
+}
+
+.contact-form button {
+  width: fit-content;
+  padding-inline: var(--space-s);
+  padding-block: var(--space-xs);
+  background-color: transparent;
+  border: 2px solid var(--fg-color);
+  border-radius: var(--border-radius-sm);
+  color: inherit;
+}
+
+.contact-form label {
+  align-self: start;
+  grid-column-start: 1;
+}
+
+@media (min-width: 45rem) {
+  .contact-form {
+    grid-template-columns: max-content 1fr;
+  }
+
+  .contact-form label {
+    padding-block: 0.5rem;
+  }
+
+  .contact-form button {
+    grid-column-start: 2;
+  }
+}

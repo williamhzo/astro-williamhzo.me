@@ -72,6 +72,12 @@ h6 {
   overflow-wrap: break-word;
 }
 
+/* Reset form and fieldset spacing */
+form,
+fieldset {
+  padding: 0;
+}
+
 /* Create a root stacking context */
 #root,
 #__next {

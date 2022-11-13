@@ -1,16 +1,28 @@
 :root {
+  /* Colors */
+  /* --color-base-light-tinted: hsl(44, 74%, 95%);
+  --color-base-dark-tinted: hsl(251, 41%, 8%); */
+  --color-base-light: hsl(44, 74%, 95%);
+  --color-base-dark: hsl(251, 41%, 8%);
+  --color-brand: hsl(254, 77%, 50%);
+  --color-brand-tinted: hsl(254, 77%, 20%);
+
+  /* --color-background: var(--color-base-light)
+  --color-background-tinted: var(--color-base-light-tinted) */
+
   /* Fonts */
 
   --font-base: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial',
     sans-serif;
   --font-weight-base: 500;
+  --font-weight-bold: 700;
   --font-heading: 'Outfit', var(--font-base);
-  --font-weight-heading: 700;
-  --measure: 60ch;
+  --font-weight-heading: var(--font-weight-bold);
+  --measure: 55ch;
 
   --gutter: var(--space-s-m);
-  --border-radius: var(--size-step-1);
-  --border-radius-sm: var(--size-step-0);
+  --border-radius: var(--size-step-0);
+  --border-radius-sm: 0.25rem;
   --transition-base: 250ms ease;
   --transition-movement: 200ms linear;
   --transition-fade: 200ms ease;
@@ -20,16 +32,22 @@
   --line-height-base: 1.4;
   --line-height-tight: 1;
 
-  /* Font sizes and space scales generated with Utopia (https://utopia.fyi/): */
+  /**
+    * Font sizes and space scales generated with Utopia (https://utopia.fyi/): 
+    *
+    * parameters:
+    * min viewport: 320px, font-size: 16px, scale: 1.2
+    * max viewport: 1350px, font-size: 20px, scale: 1.414
+  */
 
   /* Font sizes */
 
-  --size-step--1: clamp(0.8rem, calc(0.84rem + -0.06vw), 0.83rem);
-  --size-step-0: clamp(1rem, calc(0.96rem + 0.19vw), 1.13rem);
-  --size-step-1: clamp(1.2rem, calc(1.08rem + 0.61vw), 1.59rem);
-  --size-step-2: clamp(1.44rem, calc(1.19rem + 1.26vw), 2.25rem);
-  --size-step-3: clamp(1.73rem, calc(1.28rem + 2.26vw), 3.18rem);
-  --size-step-4: clamp(2.07rem, calc(1.32rem + 3.77vw), 4.5rem);
+  --size-step--1: clamp(0.83rem, calc(0.82rem + 0.08vw), 0.88rem);
+  --size-step-0: clamp(1rem, calc(0.92rem + 0.39vw), 1.25rem);
+  --size-step-1: clamp(1.2rem, calc(1.02rem + 0.88vw), 1.77rem);
+  --size-step-2: clamp(1.44rem, calc(1.11rem + 1.65vw), 2.5rem);
+  --size-step-3: clamp(1.73rem, calc(1.17rem + 2.8vw), 3.53rem);
+  --size-step-4: clamp(2.07rem, calc(1.17rem + 4.54vw), 5rem);
 
   /* Spacings */
 
@@ -41,8 +59,8 @@
   --space-l: clamp(2rem, calc(1.84rem + 0.78vw), 2.5rem);
   --space-xl: clamp(3rem, calc(2.77rem + 1.17vw), 3.75rem);
   --space-2xl: clamp(4rem, calc(3.69rem + 1.55vw), 5rem);
-  --space-3xl: clamp(6rem, calc(5.53rem + 2.33vw), 7.5rem);
 
+  /* One-up pairs */
   --space-3xs-2xs: clamp(0.25rem, calc(0.13rem + 0.58vw), 0.63rem);
   --space-2xs-xs: clamp(0.5rem, calc(0.36rem + 0.68vw), 0.94rem);
   --space-xs-s: clamp(0.75rem, calc(0.59rem + 0.78vw), 1.25rem);
@@ -50,10 +68,7 @@
   --space-m-l: clamp(1.5rem, calc(1.19rem + 1.55vw), 2.5rem);
   --space-l-xl: clamp(2rem, calc(1.46rem + 2.72vw), 3.75rem);
   --space-xl-2xl: clamp(3rem, calc(2.38rem + 3.11vw), 5rem);
-  --space-2xl-3xl: clamp(4rem, calc(2.91rem + 5.44vw), 7.5rem);
 
-  /* Colors */
-  --color-base-light: hsl(0, 0%, 95%);
-  --color-base-dark: hsl(209, 72.9%, 11.6%);
-  /* --color-brand: hsl(359, 76%, 72%); */
+  /* Custom pairs */
+  --space-l-2xl: clamp(2rem, calc(1.07rem + 4.66vw), 5rem);
 }

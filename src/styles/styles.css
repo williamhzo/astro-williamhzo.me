@@ -5,6 +5,6 @@
 @import '../styles/global/fonts.css';
 
 @import '../styles/composition/composition.css';
-@import '../styles/utilities/utilities.css';
+@import '../styles/utility/utility.css';
 @import '../styles/blocks/blocks.css';
 @import '../styles/exceptions/exceptions.css';
