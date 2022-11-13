@@ -9,6 +9,13 @@
   justify-content: center;
   align-items: center;
   padding-block: var(--space-l-2xl);
+  --cluster-direction: column;
+  --gutter: var(--space-2xs-xs);
+  text-align: center;
+}
+
+.site-footer a {
+  font-weight: var(--font-weight-base);
 }
 
 .contact-form {

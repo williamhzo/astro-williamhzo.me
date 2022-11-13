@@ -14,20 +14,35 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <Socials />
 
       <h2>Frontend Engineer, designer, & never-ending learner.</h2>
+
+      <!-- <p>
+        Welcome to my digital garden, check out my latest <a href="/blog"
+          >blog posts</a
+        >, or some stuff that <a href="/inspiration">inspire</a> me. If you have
+        project inquiries feel free to
+        <a href="#contact">get in touch</a>.
+      </p> -->
+      <p>
+        Welcome to my digital garden, if you have project inquiries feel free to
+        <a href="#contact">get in touch</a>.
+      </p>
     </article>
 
     <article class="[ wrapper ] [ region ] [ prose ]">
       <h3>Crafting user-focused interfaces</h3>
 
       <p>
-        I strongly believe in under-engineering: using the <em>right</em> tools for
-        the job, I design and build the best possible experience, regardless of end
+        I design and build the best possible experience, regardless of end
         user's device, network quality or disability — with <em
           >progressive enhancement</em
         > as a baseline.
       </p>
 
       <ul>
+        <p>
+          I strongly believe in under-engineering and using the <em>right</em> tools
+          for the job:
+        </p>
         <li>
           Leveraging fluid and global CSS to let the browser do its work rather
           than over-specifying rules and breakpoints to apply to each element.
@@ -49,7 +64,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           For dynamic and snappy Single Page Apps: React & Next.js, or Svelte &
           SvelteKit
         </li>
-        <li>Currently learning: GSAP and SvelteKit</li>
+        <li>Currently learning GSAP</li>
       </ul>
 
       <h3>Things I can do for you</h3>
@@ -68,9 +83,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <h3>Connect</h3>
 
+      <p>My location varies from Porto 🇵🇹, Bordeaux and Paris 🇫🇷.</p>
+
+      <p>If you happen to be in one of these places let's grab a cup of tea!</p>
+
       <p>
-        If you're in Porto, Bordeaux or Paris, let's grab a cup of tea! If not,
-        you can reach me on Twitter at <a
+        If not, you can reach me on Twitter at <a
           href="https://twitter.com/williamhzo"
           target="_blank"
           rel="noreferrer"
@@ -83,7 +101,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <Socials />
 
-      <h3>Got a project in mind?</h3>
+      <h3 id="contact">Got a project in mind?</h3>
 
       <p>
         Get in touch with through the form below and I'll get back to you as

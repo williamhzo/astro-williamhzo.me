@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const DESIGNS = [
+  {
+    title: 'Linear Features',
+    link: 'linear.app/features',
+    tags: ['ui', 'ux'],
+  },
+  {
+    title: 'Amie',
+    link: 'amie.so',
+    tags: ['design engineering'],
+  },
+  {
+    title: 'Stripe Press',
+    link: 'press.stripe.com',
+    tags: ['3D'],
+  },
+  {
+    title: 'Rauno Freiberg',
+    link: 'rauno.me',
+    tags: ['ui', 'experimental'],
+  },
+  {
+    title: 'ui.wtf',
+    link: 'uiw.tf',
+    tags: ['ui', 'tools'],
+  },
+  {
+    title: 'Danilo Woznica',
+    link: 'danilowoz.com',
+    tags: ['typography'],
+  },
+  {
+    title: 'Emil Kowalski',
+    link: 'emilkowal.ski',
+    tags: ['ui'],
+  },
+];
+---
+
+<BaseLayout title="Inspiration">
+  <main>
+    <article class="[ wrapper ] [ region ] [ flow ]">
+      <h1>Inspiration</h1>
+
+      <h2>
+        Some pieces of the internet that inspire me, provide some insightful
+        learning, or both — in no particular order.
+      </h2>
+
+      <ul role="list">
+        {
+          DESIGNS.map((element) => (
+            <li>
+              <a href={element.link}>
+                <div>
+                  <p>{element.title}</p>
+                  <p>{element.link}</p>
+                  {element.tags.map((tag) => (
+                    <span>{tag}</span>
+                  ))}
+                </div>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </article>
+  </main>
+</BaseLayout>

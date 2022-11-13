@@ -23,6 +23,7 @@
 .cluster {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: var(--cluster-direction, row);
   justify-content: var(--cluster-horizontal-alignment, flex-start);
   align-items: var(--cluster-vertical-alignment, center);
   gap: var(--gutter, var(--space-s-m));
