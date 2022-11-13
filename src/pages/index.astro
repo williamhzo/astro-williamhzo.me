@@ -3,7 +3,7 @@ import Socials from '../components/Socials.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Welcome to Astro.">
+<BaseLayout>
   <main>
     <article class="[ wrapper ] [ region ] [ prose ]">
       <h1>
@@ -15,6 +15,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <h2>Frontend Engineer, designer, & never-ending learner.</h2>
 
+      <!-- WHEN BLOG POST IS READY -->
       <!-- <p>
         Welcome to my digital garden, check out my latest <a href="/blog"
           >blog posts</a
@@ -32,28 +33,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <h3>Crafting user-focused interfaces</h3>
 
       <p>
-        I design and build the best possible experience, regardless of end
+        I design and build the best experience possible, regardless of end
         user's device, network quality or disability — with <em
           >progressive enhancement</em
         > as a baseline.
       </p>
 
-      <ul>
-        <p>
-          I strongly believe in under-engineering and using the <em>right</em> tools
-          for the job:
-        </p>
-        <li>
-          Leveraging fluid and global CSS to let the browser do its work rather
-          than over-specifying rules and breakpoints to apply to each element.
-        </li>
+      <p>
+        I strongly believe in under-engineering and using the <em>right</em> tools
+        for the job, being for styling the UI or for loading and displaying dynamic
+        data.
+      </p>
 
-        <li>
-          Shipping as little client-side JavaScript as possible: content-focused
-          websites that don't require complex client-side interactivity should
-          mainly ship HTML to the client, not a bloated JS framework.
-        </li>
-      </ul>
+      <p>
+        Mindful of shipping as little client-side JavaScript as possible:
+        content-focused websites that don't require complex client-side
+        interactivity should mainly serve static HTML to the client, not a
+        bloated JS framework.
+      </p>
 
       <h3>The tools I use</h3>
 
@@ -103,10 +100,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <h3 id="contact">Got a project in mind?</h3>
 
-      <p>
-        Get in touch with through the form below and I'll get back to you as
-        quickly as possible.
-      </p>
+      <p>Get in touch below and I'll get back to you as quickly as possible.</p>
 
       <form>
         <fieldset class="contact-form">

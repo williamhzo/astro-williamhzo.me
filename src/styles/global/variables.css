@@ -19,6 +19,8 @@
   --font-heading: 'Outfit', var(--font-base);
   --font-weight-heading: var(--font-weight-bold);
   --measure: 55ch;
+  --outline-offset: 0.25rem;
+  --outline-size: 2px;
 
   --gutter: var(--space-s-m);
   --border-radius: var(--size-step-0);

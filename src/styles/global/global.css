@@ -82,9 +82,21 @@ blockquote:not([class]) p:last-of-type {
 }
 
 svg {
-  height: 2ex;
+  height: 2.5ex;
   width: auto;
   flex: none;
+
+  transition: transform 200ms ease-in-out;
+}
+
+a:focus > svg {
+  transform: scale(1.1);
+  outline: var(--outline-size) solid;
+  outline-offset: var(--outline-offset);
+}
+
+svg:hover {
+  transform: scale(1.1);
 }
 
 [role='list'] {
@@ -96,22 +108,17 @@ a {
   font-weight: var(--font-weight-bold);
 }
 
-a:hover {
-  text-decoration: none;
-}
+@supports (text-decoration-color: transparent) {
+  a {
+    text-decoration: solid underline transparent var(--outline-size);
+    text-decoration-color: transparent;
+    text-underline-offset: 0.25rem;
+  }
 
-nav a {
-  text-decoration: none;
-}
-
-nav a:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.5rem;
-}
-
-:focus {
-  outline: 2px solid;
-  outline-offset: 0.3ch;
+  a:hover {
+    text-decoration-color: var(--fg-color);
+    transition: all 500ms ease-in-out;
+  }
 }
 
 :target {
@@ -120,6 +127,11 @@ nav a:hover {
 
 main:focus {
   outline: none;
+}
+
+:focus {
+  outline: var(--outline-size) solid;
+  outline-offset: var(--outline-offset);
 }
 
 main > ul[role='list'],
@@ -143,7 +155,7 @@ aside {
 }
 
 /* Screen reader only */
-svg + span {
+.sr-only {
   clip: rect(1px px, 1px, 1px, 1px);
   clip-path: inset(50%);
   height: 1px;
