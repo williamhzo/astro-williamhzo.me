@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const LINKS = [
+  {
+    label: 'twitter',
+    href: 'https://twitter.com/williamhzo',
+  },
+  {
+    label: 'email',
+    href: 'mailto:hi@williamhzo.me',
+  },
+  {
+    label: 'github',
+    href: 'https://github.com/williamhzo',
+  },
+  {
+    label: 'mastodon',
+    href: 'https://mastodon.design/@williamhzo',
+  },
+  {
+    label: 'codepen',
+    href: 'https://codepen.io/williamhzo',
+  },
+  {
+    label: 'linkedin',
+    href: 'https://www.linkedin.com/in/williamhermozo',
+  },
+];
+---
+
+<BaseLayout title="Contact">
+  <main>
+    <article class="[ wrapper ] [ flow ]">
+      <h1>Get in touch</h1>
+
+      <p>Feel free to connect and say hi :)</p>
+
+      <ul role="list" class="[ cluster ] contact-links">
+        {
+          LINKS.map((link) => (
+            <li>
+              <a href={link.href} rel="me">
+                williamhzo@{link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </article>
+  </main>
+</BaseLayout>

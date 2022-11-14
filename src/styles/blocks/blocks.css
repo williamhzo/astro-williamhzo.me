@@ -45,3 +45,8 @@
     grid-column-start: 2;
   }
 }
+
+.contact-links {
+  --cluster-direction: column;
+  --cluster-vertical-alignment: flex-start;
+}
