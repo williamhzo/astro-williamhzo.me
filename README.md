@@ -1,6 +1,6 @@
 # wip
 
-porting [williamhzo.me](https://williamhzo.me/) — Next.js — to Astro, because why not?
+porting [v1.williamhzo.me](https://v1.williamhzo.me/) — Next.js — to Astro, because why not?
 
 # roadmap
 
