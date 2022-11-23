@@ -1,24 +1,26 @@
 ---
 import Socials from '../components/Socials.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Emoji from '../components/Emoji.astro';
 ---
 
 <BaseLayout>
   <main>
     <article class="[ wrapper ] [ region ] [ prose ]">
       <h1>
-        Hi, I'm William and I build highly intuitive, performant & accessible
-        websites.
+        Hi, I'm William and I build intuitive, performant & accessible websites.
       </h1>
 
       <Socials />
+    </article>
 
-      <h2>Frontend Engineer, designer & never-ending learner.</h2>
+    <article class="[ wrapper ] [ region ] [ prose ]">
+      <h2>Passionate Frontend Engineer, designer & never-ending learner.</h2>
 
       <!-- WHEN BLOG POST IS READY -->
       <!-- <p>
         Welcome to my digital garden, check out my latest <a href="/blog"
-          >blog posts</a
+        >blog posts</a
         >, or some stuff that <a href="/inspiration">inspire</a> me. If you have
         project inquiries feel free to
         <a href="#contact">get in touch</a>.
@@ -40,18 +42,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </p>
 
       <p>
-        I strongly believe in under-engineering and using the <em>right</em> tools
-        for the job, being for styling the UI or for loading and displaying dynamic
-        data.
+        Mindful of shipping as little client-side JavaScript as possible, I
+        strongly believe in under-engineering and using the <em>right</em> tools
+        for the job, being for styling or fetching and displaying dynamic data.
       </p>
 
-      <p>
-        Mindful of shipping as little client-side JavaScript as possible:
-        content-focused websites that don't require complex client-side
-        interactivity should mainly serve static HTML to the client, not a
-        bloated JS framework.
-      </p>
+      <!-- <p>
+        I love exploring bleeding-edge tech and am delighted seing the web
+        evolve so fast, but remain conscious of the trade-offs and risks of the
+        latest shiny new thing.
+      </p> -->
+    </article>
 
+    <!-- IS THIS SECTION NEEDED? -->
+    <!-- 
+    <article class="[ wrapper ] [ region ] [ prose ]">
       <h3>The tools I use</h3>
 
       <ul>
@@ -63,41 +68,73 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </li>
         <li>Currently learning GSAP</li>
       </ul>
+    </article> -->
 
+    <article class="[ wrapper ] [ region ] [ prose ]">
       <h3>Things I can do for you</h3>
 
-      <ul role="list">
-        <li>
-          build an optimized custom landing page, for marketing or personal
-          branding
-        </li>
-        <li>
-          create or maintain your design system (includes design tokens,
-          component libraries, setting up a testing environment like Storybook)
-        </li>
-        <li>build dynamic SPAs (like onboarding funnels, dashboards, etc.)</li>
-      </ul>
+      <ul role="list" class="[ grid ]">
+        <li class="[ card ] [ flow ]">
+          <h4>Custom websites</h4>
 
+          <p>
+            Build an optimized and SEO-friendly landing page, for marketing or
+            personal branding.
+          </p>
+        </li>
+
+        <li class="[ card ] [ flow ]">
+          <h4>Design Systems</h4>
+
+          <p>
+            Contribute to your Design System: design tokens, components,
+            playground environments.
+          </p>
+        </li>
+
+        <li class="[ card ] [ flow ]">
+          <h4>SaaS/Products</h4>
+
+          <p>
+            Build dynamic SPA experiences like onboarding funnels or dashboards.
+          </p>
+        </li>
+
+        <li class="[ card ] [ flow ]">
+          <h4>CMS</h4>
+
+          <p>Set up a Content Management System (CMS) for your team.</p>
+        </li>
+      </ul>
+    </article>
+
+    <article class="[ wrapper ] [ region ] [ prose ]">
       <h3>Connect</h3>
 
-      <p>My location varies from Porto 🇵🇹, Bordeaux and Paris 🇫🇷.</p>
+      <p>
+        My location varies from Porto <Emoji
+          label="Portuguese flag"
+          emoji="🇵🇹"
+        />, Bordeaux and Paris <Emoji label="French flag" emoji="🇫🇷" />.
+      </p>
 
       <p>If you happen to be in one of these places let's grab a cup of tea!</p>
 
       <p>
         If not, you can reach me on Twitter at <a
-          href="https://twitter.com/williamhzo"
-          target="_blank"
-          rel="noreferrer"
+          href="https:
+          twitter.com
+          williamhzo"
         >
-          @williamhzo
-        </a> or via email at <a href="mailto:hi@williamhzo.me"
-          >hi@williamhzo.me</a
-        >.
+          @williamhzo</a
+        > or via email at
+        <a href="mailto:hi@williamhzo.me">hi@williamhzo.me</a>.
       </p>
 
       <Socials />
+    </article>
 
+    <article class="[ wrapper ] [ region ] [ prose ]">
       <h3 id="contact">Got a project in mind?</h3>
 
       <p>Get in touch below and I'll get back to you as quickly as possible.</p>
@@ -114,5 +151,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </fieldset>
       </form>
     </article>
+
+    <!-- <article class="[ wrapper ] [ region ] [ prose ]">
+      <h3>That's all folks!</h3>
+
+      <p>
+        You made it to the bottom, thank you for taking the time <Emoji
+          label="relieved face"
+          emoji="😌"
+        />.
+      </p>
+
+      <p>
+        If you still want some more, take a look at <a href="/how"
+          >how I built this website</a
+        >.
+      </p>
+    </article> -->
   </main>
 </BaseLayout>

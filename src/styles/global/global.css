@@ -1,7 +1,7 @@
 body {
   --bg-color: var(--color-base-light);
   --fg-color: var(--color-base-dark);
-  --bg-color-tinted: var(--);
+  /* --bg-color-tinted: var(--); */
 
   font-family: var(--font-base);
   font-size: var(--size-step-1);
@@ -17,6 +17,10 @@ body {
 .dark body {
   --bg-color: var(--color-base-dark);
   --fg-color: var(--color-base-light);
+}
+
+main {
+  /* height: 100%; */
 }
 
 /* Base typesetting */
@@ -105,17 +109,25 @@ svg:hover {
 
 a {
   color: currentcolor;
+  /* font-weight: var(--font-weight-bold); */
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.nav a {
   font-weight: var(--font-weight-bold);
 }
 
 @supports (text-decoration-color: transparent) {
-  a {
+  .nav a {
     text-decoration: solid underline transparent var(--outline-size);
     text-decoration-color: transparent;
     text-underline-offset: 0.25rem;
   }
 
-  a:hover {
+  .nav a:hover {
     text-decoration-color: var(--fg-color);
     transition: all 500ms ease-in-out;
   }

@@ -4,3 +4,18 @@
   --grid-placement: auto-fit;
   --grid-min-item-size: clamp(16rem, 50vw, 26rem);
 }
+
+.grid {
+  display: grid;
+  --grid-min-item-size: 20ch;
+  gap: var(--gutter, var(--space-s-m));
+}
+
+@supports (width: min(var(--grid-min-item-size), 100%)) {
+  .grid {
+    grid-template-columns: repeat(
+      var(--grid-placement, auto-fit),
+      minmax(min(var(--grid-min-item-size, 20ch), 100%), 1fr)
+    );
+  }
+}

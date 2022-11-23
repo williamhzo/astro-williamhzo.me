@@ -41,11 +41,11 @@
       return localStorage.getItem('theme') as string;
     }
 
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark';
+    if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+      return 'light';
     }
 
-    return 'light';
+    return 'dark';
   }
 
   const theme = getThemePreference();
