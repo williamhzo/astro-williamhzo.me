@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://williamhzo.me/sitemap-0.xml
