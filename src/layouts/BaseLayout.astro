@@ -2,27 +2,29 @@
 import '../styles/styles.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { SEO } from 'astro-seo';
 
 export interface Props {
   title?: string;
 }
 
 const { title } = Astro.props;
+
+const DEFAULT_TITLE = 'William, freelance Frontend Engineer and Web Designer';
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <SEO
+      title={title ? `${title} | ` : '' + DEFAULT_TITLE}
+      description="Freelance Frontend Engineer and Web Designer based in France and Portugal"
+    />
+
     <link
       rel="icon"
       href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐡</text></svg>"
     />
-    <title>
-      {title ? title + ' |' : undefined} William Hermozo, freelance Frontend Engineer
-      and Web Designer
-    </title>
   </head>
 
   <body>
