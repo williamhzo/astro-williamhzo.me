@@ -14,7 +14,8 @@
 
   --font-base: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial',
     sans-serif;
-  --font-weight-base: 500;
+  --font-weight-base: 400;
+  --font-weight-semi-bold: 500;
   --font-weight-bold: 700;
   --font-heading: 'Outfit', var(--font-base);
   --font-weight-heading: var(--font-weight-bold);
