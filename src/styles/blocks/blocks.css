@@ -9,6 +9,7 @@
   place-items: center;
   padding-block: var(--space-l-2xl);
   text-align: center;
+  font-size: var(--size-step--1);
 }
 
 .contact-form {
@@ -56,8 +57,4 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-}
-
-.card p {
-  /* text-align: center; */
 }
