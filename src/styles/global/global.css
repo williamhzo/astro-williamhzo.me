@@ -14,7 +14,7 @@ body {
   flex-direction: column;
 }
 
-.dark body {
+[data-theme='dark'] body {
   --bg-color: var(--color-base-dark);
   --fg-color: var(--color-base-light);
 }
@@ -93,6 +93,7 @@ svg {
   transition: transform 200ms ease-in-out;
 }
 
+/* TODO: THIS IS BAD, WILL FOCUS SVGs WITHIN LINKS :( */
 a:focus > svg {
   transform: scale(1.1);
   outline: var(--outline-size) solid;
