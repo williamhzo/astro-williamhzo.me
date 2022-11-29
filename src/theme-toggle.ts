@@ -28,16 +28,9 @@ window
  */
 
 function getColorPreference() {
-  console.log('getting pref...');
   if (localStorage.getItem(THEME_STORAGE_KEY)) {
     return localStorage.getItem(THEME_STORAGE_KEY) as string;
   } else {
-    console.log(
-      'system pref is ',
-      window.matchMedia('(prefers-color-scheme: dark)').matches
-        ? 'dark'
-        : 'light'
-    );
     return window.matchMedia('(prefers-color-scheme: dark)').matches
       ? 'dark'
       : 'light';
