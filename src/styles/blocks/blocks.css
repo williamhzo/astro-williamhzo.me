@@ -1,5 +1,61 @@
 /* https://cube.fyi/block.html */
 
+.theme-toggle {
+  --size: 2rem;
+  --icon-fill: var(--fg-color);
+
+  background: none;
+  border: none;
+  padding: 0;
+
+  inline-size: var(--size);
+  block-size: var(--size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  touch-action: manipulation;
+
+  @media (hover: none) {
+    --size: 3rem;
+  }
+}
+
+.theme-toggle > svg {
+  inline-size: 100%;
+  block-size: 100%;
+  stroke-linecap: round;
+}
+
+.sun-and-moon-icon > :is(.moon, .sun, .sun-beams) {
+  transform-origin: center center;
+}
+
+.sun-and-moon-icon > :is(.moon, .sun) {
+  fill: var(--icon-fill);
+}
+
+.sun-and-moon-icon > .sun-beams {
+  stroke: var(--icon-fill);
+  stroke-width: 2px;
+}
+
+.sun-and-moon-icon [data-theme='dark'] .sun {
+  fill: blue;
+  transform: scale(1.75);
+}
+
+.sun-and-moon-icon [data-theme='dark'] .sun-beams {
+  opacity: 0;
+}
+
+.sun-and-moon-icon [data-theme='dark'] .moon > circle {
+  transform: translateX(-7px);
+
+  @supports (cx: 1) {
+    transform: translateX(0);
+    cx: 17;
+  }
+}
+
 .site-header {
   padding-block: var(--space-s-m);
 }
