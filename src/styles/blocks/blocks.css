@@ -169,6 +169,7 @@
 
 .card-link:hover {
   border: 1px solid var(--bg-color-subtle);
+  color: var(--fg-color);
 }
 
 .card-link > span {
@@ -185,10 +186,14 @@
   color: var(--fg-color-subtle);
 }
 
+.card-link:hover > small {
+  color: var(--fg-color);
+}
+
 .card-link hr {
   flex: 1 1 0%;
   height: 1px;
   border: none;
-  background-color: var(--color-gray-light);
+  background-color: var(--bg-color-subtle);
   margin: 0;
 }

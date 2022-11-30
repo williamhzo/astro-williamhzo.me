@@ -1,16 +1,12 @@
 :root {
   /* Colors */
-  /* --color-base-light-tinted: hsl(44, 74%, 95%);
-  --color-base-dark-tinted: hsl(251, 41%, 8%); */
-  --color-base-light: hsl(44, 74%, 95%);
+  --color-base-light: hsl(0, 0%, 98%);
   --color-base-dark: hsl(251, 41%, 8%);
-  --color-brand: hsl(254, 77%, 50%);
-  --color-brand-tinted: hsl(254, 77%, 20%);
 
-  --color-gray-lighter: hsl(0 0% 13.6%);
-  --color-gray-light: hsl(0 0% 17.9%);
-  --color-gray-base: hsl(0 0% 43.9%);
-  --color-gray-dark: hsl(0 0% 62.8%);
+  --color-gray-light: hsl(206, 5.8%, 52.3%);
+  --color-gray-subtle-light: hsl(208, 11.3%, 88.9%);
+  --color-gray-dark: hsl(206, 5.2%, 49.5%);
+  --color-gray-subtle-dark: hsl(201, 6.2%, 20.5%);
 
   /* Fonts */
 
