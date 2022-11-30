@@ -26,10 +26,13 @@
   --gutter: var(--space-s-m);
   --border-radius: var(--size-step-0);
   --border-radius-sm: 0.25rem;
-  --transition-base: 250ms ease;
-  --transition-movement: 200ms linear;
-  --transition-fade: 200ms ease;
-  --transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
+  --duration-xs: 200ms;
+  --duration-sm: 250ms;
+  --duration-md: 500ms;
+  --transition-base: var(--duration-sm) ease;
+  --transition-movement: var(--duration-sm) linear;
+  --transition-fade: var(--duration-md) ease;
+  --transition-bounce: var(--duration-md) cubic-bezier(0.5, 0.05, 0.2, 1.5);
   --tracking: -0.05ch;
   --tracking-s: -0.07ch;
   --line-height-base: 1.4;

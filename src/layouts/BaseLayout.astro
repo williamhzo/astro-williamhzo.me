@@ -33,7 +33,9 @@ const DEFAULT_TITLE = 'William, freelance Frontend Engineer and Web Designer';
       })();
 
       document.firstElementChild.setAttribute('data-theme', theme);
-      document.querySelector('#theme-toggle').setAttribute('aria-label', theme);
+      document
+        .querySelector('#theme-toggle')
+        ?.setAttribute('aria-label', theme);
     </script>
 
     <SEO

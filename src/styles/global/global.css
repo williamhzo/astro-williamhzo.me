@@ -90,7 +90,7 @@ svg {
   width: auto;
   flex: none;
 
-  transition: transform 200ms ease-in-out;
+  transition: var(--transition-base);
 }
 
 /* TODO: THIS IS BAD, WILL FOCUS SVGs WITHIN LINKS :( */
@@ -145,6 +145,7 @@ main:focus {
 :focus {
   outline: var(--outline-size) solid;
   outline-offset: var(--outline-offset);
+  outline-color: var(--fg-color);
 }
 
 main > ul[role='list'],
@@ -163,7 +164,8 @@ aside {
 }
 
 * {
-  transition: 0.2s;
+  transition: var(--duration-xs);
+  transition-timing-function: ease-out;
   transition-property: color, background, filter;
 }
 
