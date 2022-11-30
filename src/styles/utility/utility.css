@@ -2,7 +2,7 @@
 
 .flow > * + *,
 .prose > * + * {
-  margin-block-start: var(--flow-space, 1em);
+  margin-block-start: var(--flow-space, var(--space-s-m));
 }
 
 .wrapper {
@@ -30,8 +30,8 @@
 }
 
 .region {
-  padding-top: var(--region-space, var(--space-l-2xl));
-  padding-bottom: var(--region-space, var(--space-l-2xl));
+  padding-top: var(--region-space, var(--space-l-xl));
+  padding-bottom: var(--region-space, var(--space-l-xl));
 }
 
 .prose {

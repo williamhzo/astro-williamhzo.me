@@ -1,10 +1,12 @@
 body {
   --bg-color: var(--color-base-light);
   --fg-color: var(--color-base-dark);
+  --bg-color-subtle: var(--color-gray-lighter);
+  --fg-color-subtle: var(--color-gray-dark);
   /* --bg-color-tinted: var(--); */
 
   font-family: var(--font-base);
-  font-size: var(--size-step-1);
+  font-size: var(--size-step-0);
   font-weight: var(--font-weight-base);
   line-height: var(--line-height-base);
   background: var(--bg-color);
@@ -17,6 +19,8 @@ body {
 [data-theme='dark'] body {
   --bg-color: var(--color-base-dark);
   --fg-color: var(--color-base-light);
+  --bg-color-subtle: var(--color-gray-lighter);
+  --fg-color-subtle: var(--color-gray-dark);
 }
 
 main {
@@ -49,15 +53,22 @@ h3 {
 } */
 
 h1 {
-  font-size: var(--size-step-4);
+  font-size: var(--size-step-2);
 }
 
 h2 {
-  font-size: var(--size-step-3);
+  font-size: var(--size-step-1);
 }
 
 h3 {
-  font-size: var(--size-step-2);
+  font-size: var(--size-step-1);
+}
+
+h4,
+h5,
+h6 {
+  font-size: var(--size-step-1);
+  font-weight: var(--font-weight-semi-bold);
 }
 
 /* Set line lengths */

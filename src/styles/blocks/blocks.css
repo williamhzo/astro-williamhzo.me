@@ -85,6 +85,14 @@
   transition-duration: 0.15s;
 }
 
+.hero h1 {
+  font-size: var(--size-step-3);
+}
+
+.hero h2 {
+  font-weight: var(--font-weight-semi-bold);
+}
+
 .site-header {
   padding-block: var(--space-s-m);
 }
@@ -137,9 +145,50 @@
   --cluster-vertical-alignment: flex-start;
 }
 
+/* TODO: Use Cluster utility instead */
 .card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+}
+
+.card-link {
+  --gutter: var(--space-xs-s);
+
+  text-decoration: none;
+  padding: var(--gutter);
+  margin-inline: calc(var(--space-xs) * -1);
+  border-radius: var(--border-radius);
+  transition-property: border, color;
+  transition-duration: var(--duration-md);
+  transition-timing-function: ease-in-out;
+  border: 1px solid transparent;
+  color: var(--fg-color);
+}
+
+.card-link:hover {
+  border: 1px solid var(--bg-color-subtle);
+}
+
+.card-link > span {
+  transition-property: letter-spacing;
+  transition-duration: var(--duration-sm);
+  transition-timing-function: ease-in-out;
+}
+
+.card-link:hover > span {
+  letter-spacing: var(--tracking-test);
+}
+
+.card-link small {
+  color: var(--fg-color-subtle);
+}
+
+.card-link hr {
+  flex: 1 1 0%;
+  height: 1px;
+  border: none;
+  background-color: var(--color-gray-light);
+  margin: 0;
 }

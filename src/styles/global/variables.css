@@ -7,8 +7,10 @@
   --color-brand: hsl(254, 77%, 50%);
   --color-brand-tinted: hsl(254, 77%, 20%);
 
-  /* --color-background: var(--color-base-light)
-  --color-background-tinted: var(--color-base-light-tinted) */
+  --color-gray-lighter: hsl(0 0% 13.6%);
+  --color-gray-light: hsl(0 0% 17.9%);
+  --color-gray-base: hsl(0 0% 43.9%);
+  --color-gray-dark: hsl(0 0% 62.8%);
 
   /* Fonts */
 
@@ -24,15 +26,17 @@
   --outline-size: 2px;
 
   --gutter: var(--space-s-m);
-  --border-radius: var(--size-step-0);
+  --border-radius: 12px;
   --border-radius-sm: 0.25rem;
   --duration-xs: 200ms;
   --duration-sm: 250ms;
   --duration-md: 500ms;
+  --duration-lg: 700ms;
   --transition-base: var(--duration-sm) ease;
   --transition-movement: var(--duration-sm) linear;
   --transition-fade: var(--duration-md) ease;
   --transition-bounce: var(--duration-md) cubic-bezier(0.5, 0.05, 0.2, 1.5);
+  --tracking-test: -0.02ch;
   --tracking: -0.05ch;
   --tracking-s: -0.07ch;
   --line-height-base: 1.4;
