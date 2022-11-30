@@ -1,40 +1,51 @@
 ---
+import CardLink from '../components/CardLink.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const DESIGNS = [
   {
-    title: 'Linear Features',
-    link: 'linear.app/features',
-    tags: ['ui', 'ux'],
+    title: 'inclusive-components',
+    href: 'https://inclusive-components.design',
+    tags: ['css', 'a11y'],
   },
   {
-    title: 'Amie',
-    link: 'amie.so',
+    title: 'amie.so',
+    href: 'https://amie.so',
     tags: ['design engineering'],
   },
   {
-    title: 'Stripe Press',
-    link: 'press.stripe.com',
+    title: 'every-layout.dev',
+    href: 'https://every-layout.dev',
+    tags: ['css'],
+  },
+  {
+    title: 'press.stripe',
+    href: 'https://press.stripe.com',
     tags: ['3D'],
   },
   {
-    title: 'Rauno Freiberg',
-    link: 'rauno.me',
+    title: 'rauno.me',
+    href: 'https://rauno.me',
     tags: ['ui', 'experimental'],
   },
   {
-    title: 'ui.wtf',
-    link: 'uiw.tf',
+    title: 'linear.app/features',
+    href: 'https://linear.app/features',
+    tags: ['ui'],
+  },
+  {
+    title: 'uiw.tf',
+    href: 'https://uiw.tf',
     tags: ['ui', 'tools'],
   },
   {
-    title: 'Danilo Woznica',
-    link: 'danilowoz.com',
+    title: 'danilowoz.com',
+    href: 'https://danilowoz.com',
     tags: ['typography'],
   },
   {
-    title: 'Emil Kowalski',
-    link: 'emilkowal.ski',
+    title: 'emilkowal.ski',
+    href: 'https://emilkowal.ski',
     tags: ['ui'],
   },
 ];
@@ -42,30 +53,15 @@ const DESIGNS = [
 
 <BaseLayout title="Inspiration">
   <main>
-    <article class="[ wrapper ] [ region ] [ flow ]">
+    <article class="[ wrapper ] [ region ] [ prose ]">
       <h1>Inspiration</h1>
 
       <h2>
-        Some pieces of the internet that inspire me, provide some insightful
-        learning, or both — in no particular order.
+        Pieces of the internet that inspire, provide some learning, or both.
       </h2>
 
       <ul role="list">
-        {
-          DESIGNS.map((element) => (
-            <li>
-              <a href={element.link}>
-                <div>
-                  <p>{element.title}</p>
-                  <p>{element.link}</p>
-                  {element.tags.map((tag) => (
-                    <span>{tag}</span>
-                  ))}
-                </div>
-              </a>
-            </li>
-          ))
-        }
+        {DESIGNS.map((link) => <CardLink link={link} />)}
       </ul>
     </article>
   </main>

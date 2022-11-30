@@ -1,0 +1,25 @@
+---
+export interface Props {
+  link: {
+    href: string;
+    title: string;
+    tags: string[];
+  };
+}
+
+const {
+  link: { href, title, tags },
+} = Astro.props;
+---
+
+<li>
+  <a href={href} class="[ repel ] [ card-link ]">
+    <span>{title}</span>
+
+    <hr />
+
+    <small>
+      {tags.join(', ')}
+    </small>
+  </a>
+</li>
