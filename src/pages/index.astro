@@ -8,13 +8,12 @@ import Emoji from '../components/Emoji.astro';
   <main>
     <article class="[ wrapper ] [ region ] [ prose ] [ hero ]">
       <h1>
-        Hi, I'm William and I build intuitive, performant & accessible websites.
+        Hi, I'm William and <em>I&nbsp;build</em> intuitive, performant & accessible
+        <em>websites</em>.
       </h1>
 
       <Socials />
-      <!-- </article> -->
 
-      <!-- <article class="[ wrapper ] [ region ] [ prose ]"> -->
       <h2>Passionate Frontend Engineer & never-ending learner.</h2>
 
       <!-- WHEN BLOG POST IS READY -->
@@ -25,26 +24,21 @@ import Emoji from '../components/Emoji.astro';
         project inquiries feel free to
         <a href="#contact">get in touch</a>.
       </p> -->
-
-      <!-- <p>
-        Welcome to my digital garden, if you have project inquiries feel free to
-        <a href="#contact">get in touch</a>.
-      </p> -->
     </article>
 
     <article class="[ wrapper ] [ region ] [ prose ]">
       <h3>Crafting user-focused interfaces</h3>
 
       <p>
-        I design and build with <em>progressive enhancement</em> as a baseline, to
-        guarantee end-user gets the best possible experience, regardless of device,
-        network quality or disability.
+        I design and build with accessibility and progressive enhancement as a
+        baseline to guarantee end-user gets the best possible experience —
+        regardless of device, network quality, disability or preference.
       </p>
 
       <p>
         Mindful of shipping as little client-side JavaScript as possible, I
-        strongly believe in under-engineering and using the <em>right</em> tools
-        for the job, being for styling or fetching and displaying dynamic data.
+        strongly believe in under-engineering and using the right tool for the
+        job, being for styles or fetching & displaying dynamic data.
       </p>
     </article>
 
@@ -90,60 +84,26 @@ import Emoji from '../components/Emoji.astro';
       <h3>Connect</h3>
 
       <p>
-        My location varies from Porto <Emoji
-          label="Portuguese flag"
-          emoji="🇵🇹"
-        />, Bordeaux and Paris <Emoji label="French flag" emoji="🇫🇷" /> — if you
-        happen to be in one of these places let's grab a cup of tea!
+        Got a project in mind? Drop me an email at
+        <a href="mailto:hi@williamhzo.me">hi@williamhzo.me</a> and I'll get back
+        to you as quickly as possible.
       </p>
 
       <p>
-        If not, you can reach me on Twitter at <a
-          href="https:
-          twitter.com
-          williamhzo"
-        >
-          @williamhzo</a
-        > or via email at
-        <a href="mailto:hi@williamhzo.me">hi@williamhzo.me</a>.
+        My location varies from Porto <Emoji
+          label="Portuguese flag"
+          emoji="🇵🇹"
+        /> and Paris <Emoji label="French flag" emoji="🇫🇷" /> — if you happen to
+        be in one of these places let's grab a cup of tea!
+      </p>
+
+      <p>
+        If you want to connect, you can reach me on <a href="/contact"
+          >various places in the internet</a
+        >, come say hi!
       </p>
 
       <Socials />
     </article>
-
-    <!-- <article class="[ wrapper ] [ region ] [ prose ]">
-      <h3 id="contact">Got a project in mind?</h3>
-
-      <p>Get in touch below and I'll get back to you as quickly as possible.</p>
-
-      <form>
-        <fieldset class="contact-form">
-          <label for="email">Your email</label>
-          <input required type="email" id="email" name="email" />
-
-          <label for="message">Your message</label>
-          <textarea required id="message" name="message"></textarea>
-
-          <button type="submit">Send</button>
-        </fieldset>
-      </form>
-    </article> -->
-
-    <!-- <article class="[ wrapper ] [ region ] [ prose ]">
-      <h3>That's all folks!</h3>
-
-      <p>
-        You made it to the bottom, thank you for taking the time <Emoji
-          label="relieved face"
-          emoji="😌"
-        />.
-      </p>
-
-      <p>
-        If you still want some more, take a look at <a href="/how"
-          >how I built this website</a
-        >.
-      </p>
-    </article> -->
   </main>
 </BaseLayout>
