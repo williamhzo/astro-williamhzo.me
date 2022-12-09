@@ -15,12 +15,6 @@
   touch-action: manipulation;
 }
 
-@media (hover: none) {
-  .theme-toggle {
-    --size: 3rem;
-  }
-}
-
 .theme-toggle > svg {
   inline-size: 100%;
   block-size: 100%;
