@@ -85,8 +85,13 @@
   transition-duration: 0.15s;
 }
 
+.icon-link {
+  color: currentcolor;
+}
+
 .hero h1 {
   font-size: var(--size-step-3);
+  font-weight: var(--font-weight-semi-bold);
 }
 
 .hero h2 {

@@ -2,7 +2,8 @@
   /* Colors */
   --color-base-light: hsl(0, 0%, 98%);
   --color-base-dark: hsl(251, 41%, 8%);
-
+  --color-accent-dark: hsl(237, 90%, 80%);
+  --color-accent-light: hsl(248, 86%, 60%);
   --color-gray-light: hsl(206, 5.8%, 52.3%);
   --color-gray-subtle-light: hsl(208, 11.3%, 88.9%);
   --color-gray-dark: hsl(206, 5.2%, 49.5%);

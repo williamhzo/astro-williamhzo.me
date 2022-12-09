@@ -3,7 +3,7 @@ body {
   --fg-color: var(--color-base-dark);
   --bg-color-subtle: var(--color-gray-subtle-light);
   --fg-color-subtle: var(--color-gray-light);
-  /* --bg-color-tinted: var(--); */
+  --accent-color: var(--color-accent-light);
 
   font-family: var(--font-base);
   font-size: var(--size-step-0);
@@ -21,6 +21,7 @@ body {
   --fg-color: var(--color-base-light);
   --bg-color-subtle: var(--color-gray-subtle-dark);
   --fg-color-subtle: var(--color-gray-dark);
+  --accent-color: var(--color-accent-dark);
 }
 
 main {
@@ -46,11 +47,6 @@ h3 {
   letter-spacing: var(--tracking-s);
   max-width: 24ch;
 }
-
-/* h2,
-h3 {
-  max-width: 26ch;
-} */
 
 h1 {
   font-size: var(--size-step-2);
@@ -84,6 +80,11 @@ blockquote:not([class]) {
 
 /* Generic elements */
 
+em {
+  color: var(--accent-color);
+  font-style: normal;
+}
+
 blockquote:not([class]) {
   font-family: var(--font-serif);
   font-size: var(--size-step-2);
@@ -100,7 +101,6 @@ svg {
   height: 2.5ex;
   width: auto;
   flex: none;
-
   transition: var(--transition-base);
 }
 
@@ -120,8 +120,7 @@ svg:hover {
 }
 
 a {
-  color: currentcolor;
-  /* font-weight: var(--font-weight-bold); */
+  color: var(--accent-color);
 }
 
 a:hover {
@@ -129,6 +128,7 @@ a:hover {
 }
 
 .nav a {
+  color: currentcolor;
   font-weight: var(--font-weight-bold);
 }
 

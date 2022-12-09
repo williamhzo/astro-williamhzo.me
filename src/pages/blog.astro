@@ -1,15 +1,17 @@
 ---
+import Emoji from '../components/Emoji.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const posts = await Astro.glob('../pages/posts/*.md');
-const title = 'Blog';
 ---
 
-<BaseLayout title={title}>
+<BaseLayout title="Blog">
   <main>
-    <h1>{title}</h1>
-    <p>blog page</p>
-
+    <article class="[ wrapper ] [ region ] [ prose ]">
+      <h1>Blog</h1>
+      <p>Writing in progress <Emoji emoji="🙃" label="face upside down" /></p>
+      <p>ETA end of December!</p>
+      <!-- 
     <ul>
       {
         posts.map((post) => (
@@ -18,6 +20,7 @@ const title = 'Blog';
           </li>
         ))
       }
-    </ul>
+    </ul> -->
+    </article>
   </main>
 </BaseLayout>
