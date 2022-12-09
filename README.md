@@ -10,6 +10,5 @@ in no particular order:
 - [ ] write a damn blog post (been procrastinating this one for a while)
 - [ ] find and add mono font
 - [ ] /projects page
-- [ ] /inspiration page
 - [ ] article on design tokens in Astro
 - [ ] add RSS (https://docs.astro.build/en/guides/rss/)
