@@ -83,9 +83,15 @@
   color: currentcolor;
 }
 
+/* TODO: Should this be in /exceptions css? */
 .hero h1 {
   font-size: var(--size-step-3);
   font-weight: var(--font-weight-semi-bold);
+  font-style: normal;
+}
+
+.hero em {
+  font-style: normal;
 }
 
 .hero h2 {

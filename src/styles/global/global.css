@@ -82,7 +82,6 @@ blockquote:not([class]) {
 
 em {
   color: var(--accent-color);
-  font-style: normal;
 }
 
 blockquote:not([class]) {
