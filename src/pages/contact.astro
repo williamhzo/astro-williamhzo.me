@@ -15,6 +15,10 @@ const LINKS = [
     href: 'https://github.com/williamhzo',
   },
   {
+    label: 'read.cv',
+    href: 'https://read.cv/williamhzo',
+  },
+  {
     label: 'mastodon',
     href: 'https://mastodon.design/@williamhzo',
   },
@@ -40,21 +44,13 @@ const LINKS = [
         {
           LINKS.map((link) => (
             <li>
-              <a href={link.href} rel="me">
-                williamhzo@{link.label}
+              <a href={link.href} rel="me" class="contact-link">
+                williamhzo<span>@{link.label}</span>
               </a>
             </li>
           ))
         }
       </ul>
     </article>
-
-    <section class="[ wrapper ] [ prose ]">
-      <small>
-        This website won't track you or try to sell you anything. See <a
-          href="https://github.com/williamhzo/williamhzo.me">source code</a
-        >.
-      </small>
-    </section>
   </main>
 </BaseLayout>

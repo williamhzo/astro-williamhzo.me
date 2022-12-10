@@ -196,3 +196,15 @@
   background-color: var(--bg-color-subtle);
   margin: 0;
 }
+
+.contact-link {
+  /* font-weight: var(--font-weight-bold); */
+  color: var(--fg-color);
+}
+
+.contact-link span {
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--accent-color);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-color);
+}

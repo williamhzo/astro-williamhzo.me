@@ -1,0 +1,87 @@
+---
+import Emoji from '../components/Emoji.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About">
+  <main>
+    <article class="[ wrapper ] [ region ] [ prose ]">
+      <h1>About me</h1>
+
+      <p>
+        Hey, I'm William <Emoji emoji="👋" label="waving hand" />
+      </p>
+
+      <p>
+        I'm a freelance Frontend & UI Engineer from the South-West of France,
+        currently based in Porto. Welcome to my small space of the internet,
+        where I showcase my work, learnings and anything else I want to show to
+        the world.
+      </p>
+
+      <p>
+        Before building websites I worked in various roles in the frame of my
+        Mechanical Engineering Degree: Construction Site Manager, Logistics
+        Consultant and Mechanical Testing Engineer.
+      </p>
+
+      <p>
+        Deeply passionate about clean user interfaces and painting on the
+        internet, I find inspiration and resources in a broad range of fields
+        and art. I'm trying to be more mindful of my time, to deliver quality
+        work while remaining productive.
+      </p>
+
+      <p>
+        If you wish to connect, you can reach me through one of the <a
+          href="/contact">contact links</a
+        >.
+      </p>
+    </article>
+
+    <article class="[ wrapper ] [ region ] [ prose ]">
+      <h2>This website</h2>
+
+      <p>
+        See <a href="https://github.com/williamhzo/williamhzo.me">source code</a
+        >.
+      </p>
+
+      <p>
+        This site has no ads, tracking, analytics, sponsors or affiliation, and
+        will never have. I want to contribute to making the web a better place
+        as I believe in a <em>genuine</em>, <em>inclusive</em>, <em>fun</em> and
+        <em>open</em> internet.
+      </p>
+
+      <p>
+        It's a static webiste built with <a href="https://astro.build/">Astro</a
+        >, vanilla CSS and is hosted on <a href="https://vercel.com">Vercel</a>.
+      </p>
+
+      <p>
+        Building it without a specific Frontend framework or a fancy CSS library
+        was a bowl of fresh air in these times where shipping massive bundles of
+        JavaScript to the browser is often the default.
+      </p>
+
+      <p>
+        For styling, I followed <a href="https://andy-bell.co.uk/">Andy Bell</a
+        >'s methodology called <a href="https://cube.fyi/">CubeCSS</a> — which is
+        a way to organise stylesheets in a scalable and maintainable manner — along
+        with some wisdom from his talk <a
+          href="https://www.youtube.com/watch?v=5uhIiI9Ld5M"
+          >Be the browser's mentor, not his micromanager</a
+        >.
+      </p>
+
+      <p>
+        Some styles are based on Andy's and <a href="https://heydonworks.com/"
+          >Heydon</a
+        >'s <a href="https://every-layout.dev/">Every Layout</a>, which is a
+        great ressource deep-diving into common layout patterns and their
+        implementation with modern CSS (with progressive enhancement in mind).
+      </p>
+    </article>
+  </main>
+</BaseLayout>
