@@ -1,0 +1,30 @@
+---
+import Emoji from '../components/Emoji.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const posts = await Astro.glob('../pages/writing/*.md');
+---
+
+<BaseLayout title="Writing">
+  <main>
+    <article class="[ wrapper ] [ region ] [ prose ]">
+      <h1>Writing</h1>
+      <p>Writing in progress <Emoji emoji="🙃" label="face upside down" /></p>
+      <p>ETA end of December!</p>
+
+      <ul role="list">
+        {
+          posts.map((post) => (
+            <li>
+              <a href={post.url}>
+                <h2>{post.frontmatter.title}</h2>
+              </a>
+              <p>{post.frontmatter.publishedDate}</p>
+              <p>{post.frontmatter.description}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </article>
+  </main>
+</BaseLayout>

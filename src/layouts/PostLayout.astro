@@ -5,29 +5,22 @@ export interface Props {
   frontmatter: {
     title: string;
     publishedDate: string;
-    image: {
-      url: string;
-      alt: string;
-    };
     description: string;
-    author: string;
-    tags: string[];
   };
 }
 
-const { frontmatter } = Astro.props;
+const {
+  frontmatter: { title, publishedDate, description },
+} = Astro.props;
 ---
 
-<BaseLayout title={frontmatter.title}>
-  <h1>{frontmatter.title}</h1>
-  <p><em>{frontmatter.author}</em></p>
-  <small>{frontmatter.publishedDate}</small>
-  <p>{frontmatter.description}</p>
-  {
-    frontmatter.tags.map((tag) => (
-      <span style={{ marginRight: '1rem' }}>{tag}</span>
-    ))
-  }
-  <img src={frontmatter.image.url} />
-  <slot />
+<BaseLayout title={title}>
+  <article class="[ wrapper ] [ region ] [ prose ]">
+    <h1>{title}</h1>
+    <small>{description}</small>
+
+    <small>{publishedDate}</small>
+
+    <slot />
+  </article>
 </BaseLayout>
