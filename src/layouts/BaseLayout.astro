@@ -5,7 +5,7 @@ import Footer from '../components/Footer.astro';
 import { SEO } from 'astro-seo';
 
 export interface Props {
-  title: string;
+  title: string | null;
 }
 
 const { title } = Astro.props;
@@ -39,7 +39,7 @@ const DEFAULT_TITLE = 'William — freelance Frontend Engineer and Web Designer'
     </script>
 
     <SEO
-      title={`${title} | ${DEFAULT_TITLE}`}
+      title={title ? `${title} | ${DEFAULT_TITLE}` : DEFAULT_TITLE}
       description="Freelance Frontend Engineer and Web Designer based in France and Portugal"
     />
 
