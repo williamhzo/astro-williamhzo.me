@@ -24,8 +24,8 @@ body {
   --accent-color: var(--color-accent-dark);
 }
 
-main {
-  /* height: 100%; */
+body {
+  border-top: 3px solid var(--accent-color);
 }
 
 /* Base typesetting */
