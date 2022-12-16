@@ -2,13 +2,13 @@
 import Emoji from '../components/Emoji.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const posts = await Astro.glob('../pages/writing/*.md');
+const posts = await Astro.glob('../pages/notes/*.md');
 ---
 
-<BaseLayout title="Writing">
+<BaseLayout title="Notes">
   <main>
     <article class="[ wrapper ] [ region ] [ prose ]">
-      <h1>Writing</h1>
+      <h1>Notes</h1>
       <p>Writing in progress <Emoji emoji="🙃" label="face upside down" /></p>
       <p>ETA end of December!</p>
 
