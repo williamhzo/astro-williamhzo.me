@@ -214,3 +214,8 @@
   text-decoration: underline;
   text-decoration-color: var(--accent-color);
 }
+
+.post h1 {
+  font-size: var(--size-step-3);
+  font-weight: var(--font-weight-base);
+}

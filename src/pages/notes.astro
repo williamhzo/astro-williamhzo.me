@@ -3,6 +3,8 @@ import Emoji from '../components/Emoji.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const posts = await Astro.glob('../pages/notes/*.md');
+
+const publishedPosts = posts.filter((post) => post.frontmatter.published);
 ---
 
 <BaseLayout title="Notes">
@@ -14,13 +16,14 @@ const posts = await Astro.glob('../pages/notes/*.md');
 
       <ul role="list">
         {
-          posts.map((post) => (
+          publishedPosts.map((post) => (
             <li>
               <a href={post.url}>
                 <h2>{post.frontmatter.title}</h2>
+
+                <p>{post.frontmatter.publishedDate}</p>
+                <p>{post.frontmatter.description}</p>
               </a>
-              <p>{post.frontmatter.publishedDate}</p>
-              <p>{post.frontmatter.description}</p>
             </li>
           ))
         }
