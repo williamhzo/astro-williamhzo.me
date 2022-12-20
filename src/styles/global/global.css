@@ -30,7 +30,6 @@ body {
 
 /* Base typesetting */
 
-h1,
 h2,
 h3,
 h4,
@@ -49,11 +48,13 @@ h3 {
 }
 
 h1 {
-  font-size: var(--size-step-2);
+  font-family: var(--font-heading);
+  font-size: var(--size-step-3);
+  font-weight: var(--font-weight-base);
 }
 
 h2 {
-  font-size: var(--size-step-1);
+  font-size: var(--size-step-2);
 }
 
 h3 {

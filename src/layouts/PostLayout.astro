@@ -1,4 +1,5 @@
 ---
+import Emoji from '../components/Emoji.astro';
 import BaseLayout from './BaseLayout.astro';
 
 export interface Props {
@@ -18,10 +19,23 @@ const {
   <article class="[ wrapper ] [ region ] [ prose ] [ post ]">
     <h1>{title}</h1>
 
-    <small>{description}</small>
+    <time datetime={publishedDate}>{publishedDate}</time>
 
-    <small>{publishedDate}</small>
+    <p class="post-description">{description}</p>
 
     <slot />
+
+    <p>Until next time!</p>
+
+    <p>William <Emoji emoji="🐡" label="blowfish" /></p>
+
+    <p>
+      <small>
+        Noticed a typo, or wish to improve this post? <a
+          href="https://github.com/williamhzo/williamhzo.me/tree/main/src/pages/notes"
+          >Edit this page on GitHub</a
+        >.
+      </small>
+    </p>
   </article>
 </BaseLayout>

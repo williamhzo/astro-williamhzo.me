@@ -3,7 +3,7 @@ layout: '../../layouts/PostLayout.astro'
 title: 'test post'
 publishedDate: '2022-07-01'
 description: 'This is a test post, to define styles'
-published: true
+published: false
 ---
 
 ## this is an h2
