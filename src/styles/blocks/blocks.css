@@ -213,11 +213,22 @@
   text-decoration-color: var(--accent-color);
 }
 
-.post time {
+time {
   font-size: var(--size-step--1);
   color: var(--accent-color);
 }
 
 .post-description {
   font-style: italic;
+}
+
+.posts-list li {
+  border-inline-start: var(--outline-size) solid var(--accent-color);
+  padding-inline-start: var(--space-s-m);
+}
+
+.posts-list a {
+  font-size: var(--size-step-2);
+  font-weight: var(--font-weight-heading);
+  font-family: var(--font-heading);
 }
