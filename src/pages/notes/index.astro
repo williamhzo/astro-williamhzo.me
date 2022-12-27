@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import type { Frontmatter } from '../../types/Frontmatter';
+
+const posts = await Astro.glob<Frontmatter>('../../notes/**/*.md');
+const publishedPosts = posts.filter((post) => post.frontmatter.publish);
+---
+
+<BaseLayout title="Notes">
+  <main>
+    <article class="[ wrapper ] [ region ] [ prose ]">
+      <h1>Latest notes</h1>
+
+      <ul role="list" class="posts-list">
+        {
+          publishedPosts.map(({ frontmatter }) => (
+            <li class="[ flow ]">
+              <a href={`/notes/${frontmatter.slug}`}>{frontmatter.title}</a>
+
+              <div>
+                <p>{frontmatter.publishedDate}</p>
+                <p class="post-description">{frontmatter.description}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </article>
+  </main>
+</BaseLayout>

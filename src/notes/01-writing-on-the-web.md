@@ -1,9 +1,9 @@
 ---
-layout: '../../layouts/PostLayout.astro'
 title: 'Writing on the web'
 publishedDate: 'Monday, 19th December, 2022'
 description: "The obligatory first blog post — or 'Hello, world'."
-published: true
+slug: 'writing-on-the-web'
+publish: true
 ---
 
 ## Hello, World

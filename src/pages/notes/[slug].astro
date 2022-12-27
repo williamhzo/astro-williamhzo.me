@@ -1,0 +1,20 @@
+---
+import type { Frontmatter } from '../../types/Frontmatter';
+
+export async function getStaticPaths() {
+  const posts = await Astro.glob<Frontmatter>('../../notes/**/*.md');
+
+  return posts.map((post) => ({
+    params: {
+      slug: post.frontmatter.slug,
+    },
+    props: {
+      post,
+    },
+  }));
+}
+
+const { Content } = Astro.props.post;
+---
+
+<Content />
