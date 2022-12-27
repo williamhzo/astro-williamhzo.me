@@ -1,4 +1,5 @@
 import rss from '@astrojs/rss';
+import sanitizeHtml from 'sanitize-html';
 
 const postsImportResult = import.meta.glob('../content/**/*.md', {
   eager: true,
@@ -15,6 +16,7 @@ export const get = () =>
       link: post.frontmatter.canonicalUrl,
       title: post.frontmatter.title,
       pubDate: post.frontmatter.publishedDate,
+      content: sanitizeHtml(post.compiledContent()),
     })),
     customData: `<language>en-gb</language>`,
   });
