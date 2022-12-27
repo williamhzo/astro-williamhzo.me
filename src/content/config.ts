@@ -6,6 +6,7 @@ const notes = defineCollection({
     publishedDate: z.date(),
     description: z.string(),
     slug: z.string(),
+    canonicalUrl: z.string().url(),
     publish: z.boolean(),
     draft: z.boolean().default(false),
   },
