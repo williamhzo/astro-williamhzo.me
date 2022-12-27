@@ -32,3 +32,5 @@ in no particular order:
 - make a starter template out of this blog
 - add [RSS](https://docs.astro.build/en/guides/rss/)
 - add Open-Graph images
+- add link to headings
+- add code and codeblocks renderers (Markdoc)
