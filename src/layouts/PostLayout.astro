@@ -1,25 +1,24 @@
 ---
 import Emoji from '../components/Emoji.astro';
 import BaseLayout from './BaseLayout.astro';
+import type { CollectionEntry } from 'astro:content';
+import { formatDate } from '../utils/dates.utils';
 
 export interface Props {
-  frontmatter: {
-    title: string;
-    publishedDate: string;
-    description: string;
-  };
+  post: CollectionEntry<'notes'>;
 }
 
-const {
-  frontmatter: { title, publishedDate, description },
-} = Astro.props;
+const { post } = Astro.props;
+const { title, publishedDate, description } = post.data;
 ---
 
 <BaseLayout title={title}>
   <article class="[ wrapper ] [ region ] [ prose ]">
     <h1>{title}</h1>
 
-    <time datetime={publishedDate}>{publishedDate}</time>
+    <time datetime={publishedDate.toISOString()}>
+      {formatDate(publishedDate)}
+    </time>
 
     <p class="post-description">{description}</p>
 
@@ -27,7 +26,9 @@ const {
 
     <p>Until next time!</p>
 
-    <p>William <Emoji emoji="🐡" label="blowfish" /></p>
+    <p>
+      William <Emoji emoji="🐡" label="blowfish" />
+    </p>
 
     <p>
       <small>

@@ -223,6 +223,7 @@ time {
 }
 
 .posts-list li {
+  --flow-space: var(--space-2xs-xs);
   border-inline-start: var(--outline-size) solid var(--accent-color);
   padding-inline-start: var(--space-s-m);
 }
