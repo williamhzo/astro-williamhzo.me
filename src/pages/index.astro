@@ -104,5 +104,69 @@ import Emoji from '../components/Emoji.astro';
 
       <Socials />
     </article>
+
+    <article class="[ wrapper ] [ region ] [ prose ]">
+      <h3>Currently I'm...</h3>
+
+      <ul role="list" class="[ flow ]">
+        <li class="[ card ] [ flow ]">
+          <h4>
+            Experimenting with <a href="https://kit.svelte.dev/">SvelteKit</a>
+          </h4>
+
+          <p>
+            Enjoying Svelte's powerful reactivity model with SvelteKit's awesome
+            DX and built-in features.
+          </p>
+        </li>
+
+        <li class="[ card ] [ flow ]">
+          <h4>Reading</h4>
+
+          <ul role="list" class="[ flow ]">
+            <li>
+              <p>
+                <a href="https://makevscodeawesome.com/">Make VSCode awesome</a
+                >: opinionated set-up for a distraction-free and keyboard-first
+                IDE.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <a href="https://inclusive-components.design"
+                  >Inclusive Components</a
+                >: a deep-dive into the foundations for building accessible and
+                robust components, for everyone.
+              </p>
+            </li>
+          </ul>
+        </li>
+
+        <li class="[ card ] [ flow ]">
+          <h4>Making</h4>
+
+          <ul role="list" class="[ flow ]">
+            <li>
+              <p>An open-source starter template out of this blog.</p>
+            </li>
+
+            <li>
+              <p>
+                An opinionated component library in Svelte, with <a
+                  href="https://histoire.dev/">Histoire</a
+                > as component playground.
+              </p>
+            </li>
+          </ul>
+        </li>
+
+        <p>
+          <small>
+            Last updated: <time datetime="2023-01">January 2023</time>
+          </small>
+        </p>
+      </ul>
+    </article>
   </main>
 </BaseLayout>
