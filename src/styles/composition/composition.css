@@ -1,9 +1,5 @@
 /* https://cube.fyi/composition.html */
-
-.grid[data-layout='50-50'] {
-  --grid-placement: auto-fit;
-  --grid-min-item-size: clamp(16rem, 50vw, 26rem);
-}
+/* TL;DR: Layouts and structural styles */
 
 .grid {
   display: grid;
