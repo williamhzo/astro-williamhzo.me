@@ -19,7 +19,9 @@ const sortedPosts = [...posts].sort(
         {
           sortedPosts.map(({ data }) => (
             <li class="[ flow ]">
-              <a href={`/notes/${data.slug}`}>{data.title}</a>
+              <a href={`/notes/${data.slug}`} rel="prefetch">
+                {data.title}
+              </a>
 
               <div>
                 <time datetime={data.publishedDate.toISOString()}>
