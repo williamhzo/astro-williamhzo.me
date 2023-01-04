@@ -1,56 +1,27 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
-
-const LINKS = [
-  {
-    label: 'twitter',
-    href: 'https://twitter.com/williamhzo',
-  },
-  {
-    label: 'email',
-    href: 'mailto:hi@williamhzo.me',
-  },
-  {
-    label: 'github',
-    href: 'https://github.com/williamhzo',
-  },
-  {
-    label: 'read.cv',
-    href: 'https://read.cv/williamhzo',
-  },
-  {
-    label: 'mastodon',
-    href: 'https://mastodon.design/@williamhzo',
-  },
-  {
-    label: 'codepen',
-    href: 'https://codepen.io/williamhzo',
-  },
-  {
-    label: 'linkedin',
-    href: 'https://www.linkedin.com/in/williamhermozo',
-  },
-];
+import { LINKS } from '@data/links';
+import PageMeta from '@layouts/seo/PageMeta.astro';
 ---
 
-<BaseLayout title="Contact">
-  <main id="main" role="main">
-    <article class="[ wrapper ] [ prose ] [ region ]">
-      <h1>Get in touch</h1>
+<BaseLayout>
+  <PageMeta title="Contact" />
 
-      <p>Feel free to connect and say hi :)</p>
+  <article class="[ wrapper ] [ prose ] [ region ]" slot="main">
+    <h1>Get in touch</h1>
 
-      <ul role="list" class="[ cluster ] contact-links">
-        {
-          LINKS.map((link) => (
-            <li>
-              <a href={link.href} rel="me" class="contact-link">
-                williamhzo<span>@{link.label}</span>
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </article>
-  </main>
+    <p>Feel free to connect and say hi :)</p>
+
+    <ul role="list" class="[ cluster ] contact-links">
+      {
+        LINKS.map((link) => (
+          <li>
+            <a href={link.href} rel="me" class="contact-link">
+              williamhzo<span>@{link.label}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </article>
 </BaseLayout>

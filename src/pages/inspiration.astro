@@ -1,73 +1,22 @@
 ---
 import CardLink from '@components/CardLink.astro';
 import BaseLayout from '@layouts/BaseLayout.astro';
-
-const DESIGNS = [
-  {
-    title: 'inclusive-components',
-    href: 'https://inclusive-components.design',
-    tags: ['css', 'a11y'],
-  },
-  {
-    title: 'amie.so',
-    href: 'https://amie.so',
-    tags: ['design engineering'],
-  },
-  {
-    title: 'every-layout.dev',
-    href: 'https://every-layout.dev',
-    tags: ['css'],
-  },
-  {
-    title: 'press.stripe',
-    href: 'https://press.stripe.com',
-    tags: ['3D'],
-  },
-  {
-    title: 'rauno.me',
-    href: 'https://rauno.me',
-    tags: ['ui', 'experimental'],
-  },
-  {
-    title: 'linear.app/features',
-    href: 'https://linear.app/features',
-    tags: ['ui'],
-  },
-  {
-    title: 'uiw.tf',
-    href: 'https://uiw.tf',
-    tags: ['ui', 'tools'],
-  },
-  {
-    title: 'danilowoz.com',
-    href: 'https://danilowoz.com',
-    tags: ['typography'],
-  },
-  {
-    title: 'emilkowal.ski',
-    href: 'https://emilkowal.ski',
-    tags: ['ui'],
-  },
-  {
-    title: 'ui.land',
-    href: 'https://ui.land',
-    tags: ['design engineering'],
-  },
-];
+import { DESIGNS } from '@data/inspiration';
+import PageMeta from '@layouts/seo/PageMeta.astro';
 ---
 
-<BaseLayout title="Inspiration">
-  <main id="main" role="main">
-    <article class="[ wrapper ] [ region ] [ prose ]">
-      <h1>Inspiration</h1>
+<BaseLayout>
+  <PageMeta title="Inspiration" />
 
-      <h2>
-        Pieces of the internet that inspire, provide some learning, or both.
-      </h2>
+  <article class="[ wrapper ] [ region ] [ prose ]" slot="main">
+    <h1>Inspiration</h1>
 
-      <ul role="list">
-        {DESIGNS.map((link) => <CardLink link={link} />)}
-      </ul>
-    </article>
-  </main>
+    <h2>
+      Pieces of the internet that inspire, provide some learning, or both.
+    </h2>
+
+    <ul role="list">
+      {DESIGNS.map((link) => <CardLink link={link} />)}
+    </ul>
+  </article>
 </BaseLayout>
