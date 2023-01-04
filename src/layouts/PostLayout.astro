@@ -1,8 +1,8 @@
 ---
-import Emoji from '../components/Emoji.astro';
+import Emoji from '@components/Emoji.astro';
 import BaseLayout from './BaseLayout.astro';
 import type { CollectionEntry } from 'astro:content';
-import { formatDate } from '../utils/dates.utils';
+import { formatDate } from '@utils/dates.utils';
 
 export interface Props {
   post: CollectionEntry<'notes'>;
