@@ -1,10 +1,13 @@
 ---
 import Emoji from '@components/Emoji.astro';
 import BaseLayout from '@layouts/BaseLayout.astro';
+import PageMeta from '@layouts/seo/PageMeta.astro';
 ---
 
-<BaseLayout title="About">
-  <main id="main" role="main">
+<BaseLayout>
+  <PageMeta title="About" slot="meta" />
+
+  <Fragment slot="main">
     <article class="[ wrapper ] [ region ] [ prose ]">
       <h1>About me</h1>
 
@@ -100,5 +103,5 @@ import BaseLayout from '@layouts/BaseLayout.astro';
         >!
       </p>
     </article>
-  </main>
+  </Fragment>
 </BaseLayout>

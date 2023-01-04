@@ -2,10 +2,13 @@
 import Socials from '@components/Socials.astro';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Emoji from '@components/Emoji.astro';
+import PageMeta from '@layouts/seo/PageMeta.astro';
 ---
 
-<BaseLayout title={null}>
-  <main id="main" role="main">
+<BaseLayout>
+  <PageMeta title="" slot="meta" slot="meta" />
+
+  <Fragment slot="main">
     <article class="[ wrapper ] [ region ] [ prose ] [ hero ]">
       <h1>
         Hi, I'm William and <em>I&nbsp;build</em> intuitive, performant & accessible
@@ -92,8 +95,9 @@ import Emoji from '@components/Emoji.astro';
         My location varies from Porto <Emoji
           label="Portuguese flag"
           emoji="🇵🇹"
-        /> and Paris <Emoji label="French flag" emoji="🇫🇷" /> — if you happen to
-        be in one of these places let's grab a cup of tea!
+        />
+        and Paris <Emoji label="French flag" emoji="🇫🇷" /> — if you happen to be
+        in one of these places let's grab a cup of tea!
       </p>
 
       <p>
@@ -167,5 +171,5 @@ import Emoji from '@components/Emoji.astro';
         </p>
       </ul>
     </article>
-  </main>
+  </Fragment>
 </BaseLayout>

@@ -1,9 +1,12 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
+import PageMeta from '@layouts/seo/PageMeta.astro';
 ---
 
-<BaseLayout title={null}>
-  <article class="[ wrapper ] [ region ] [ prose ]">
+<BaseLayout>
+  <PageMeta title="Not found" />
+
+  <article class="[ wrapper ] [ region ] [ prose ]" slot="main">
     <h1>Page not found...</h1>
 
     <p>

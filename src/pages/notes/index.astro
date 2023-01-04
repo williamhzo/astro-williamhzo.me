@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '@layouts/BaseLayout.astro';
+import PageMeta from '@layouts/seo/PageMeta.astro';
 import { formatDate } from '@utils/dates.utils';
 
 // getting published posts and sorting them by decreasing published date
@@ -10,29 +11,29 @@ const sortedPosts = [...posts].sort(
 );
 ---
 
-<BaseLayout title="Notes">
-  <main id="main" role="main">
-    <article class="[ wrapper ] [ region ] [ prose ]">
-      <h1>Latest notes</h1>
+<BaseLayout>
+  <PageMeta title="Notes" slot="meta" />
 
-      <ul role="list" class="[ posts-list ] [ flow ]">
-        {
-          sortedPosts.map(({ data }) => (
-            <li class="[ flow ]">
-              <a href={`/notes/${data.slug}`} rel="prefetch">
-                {data.title}
-              </a>
+  <article class="[ wrapper ] [ region ] [ prose ]" slot="main">
+    <h1>Latest notes</h1>
 
-              <div>
-                <time datetime={data.publishedDate.toISOString()}>
-                  {formatDate(data.publishedDate)}
-                </time>
-                <p class="post-description">{data.description}</p>
-              </div>
-            </li>
-          ))
-        }
-      </ul>
-    </article>
-  </main>
+    <ul role="list" class="[ posts-list ] [ flow ]">
+      {
+        sortedPosts.map(({ data }) => (
+          <li class="[ flow ]">
+            <a href={`/notes/${data.slug}`} rel="prefetch">
+              {data.title}
+            </a>
+
+            <div>
+              <time datetime={data.publishedDate.toISOString()}>
+                {formatDate(data.publishedDate)}
+              </time>
+              <p class="post-description">{data.description}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </article>
 </BaseLayout>

@@ -3,6 +3,7 @@ import Emoji from '@components/Emoji.astro';
 import BaseLayout from './BaseLayout.astro';
 import type { CollectionEntry } from 'astro:content';
 import { formatDate } from '@utils/dates.utils';
+import PageMeta from './seo/PageMeta.astro';
 
 export interface Props {
   post: CollectionEntry<'notes'>;
@@ -12,8 +13,10 @@ const { post } = Astro.props;
 const { title, publishedDate, description } = post.data;
 ---
 
-<BaseLayout title={title}>
-  <article class="[ wrapper ] [ region ] [ prose ]">
+<BaseLayout>
+  <PageMeta title={title} description={description} slot="meta" />
+
+  <article class="[ wrapper ] [ region ] [ prose ]" slot="main">
     <h1>{title}</h1>
 
     <time datetime={publishedDate.toISOString()}>
