@@ -1,0 +1,50 @@
+---
+import { SEO } from 'astro-seo';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+
+const DEFAULT_PAGE_TITLE = 'William, freelance Frontend Engineer';
+const DEFAULT_PAGE_DESCRIPTION =
+  'Freelance Frontend and Design Systems Engineer focused on accessibility and building intuitive interfaces. Building websites for humans with progressive enhancement, accessibility, SEO and performance by design.';
+---
+
+<!-- see https://github.com/jonasmerlin/astro-seo#readme. -->
+<SEO
+  title={title ? `${title} | ${DEFAULT_PAGE_TITLE}` : DEFAULT_PAGE_TITLE}
+  description={description || DEFAULT_PAGE_DESCRIPTION}
+  charset="UTF-8"
+  extend={{
+    // extending link tags
+    link: [
+      // favicon
+      {
+        rel: 'icon',
+        href: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐡</text></svg>',
+      },
+    ],
+    // extending meta tags
+    meta: [
+      { name: 'viewport', content: 'width=device-width' },
+      { name: 'generator', content: 'astro-kit' },
+    ],
+  }}
+  twitter={{
+    creator: '@williamhzo',
+  }}
+/>
+<!--
+  // TODO:
+  openGraph={{
+    basic: { title: og.title, type: og.type, image: og.image }
+  }}
+  meta: [
+    { name: 'twitter:image', content: og.image },
+    { name: 'twitter:title', content: og.title },
+    { name: 'twitter:description', content: og.description }
+  ]
+-->

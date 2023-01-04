@@ -1,0 +1,21 @@
+<!-- theme toggling logic (click handler & storing preference) -->
+<script src="./theme-toggle.ts"></script>
+
+<!-- blocking script to prevent flash of unwanted theme, ensuring that the right preference is loaded straight away -->
+<script is:inline>
+  const theme = (() => {
+    if (
+      typeof localStorage !== 'undefined' &&
+      localStorage.getItem('theme-preference')
+    ) {
+      return localStorage.getItem('theme-preference');
+    } else {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light';
+    }
+  })();
+
+  document.firstElementChild.setAttribute('data-theme', theme);
+  document.querySelector('#theme-toggle')?.setAttribute('aria-label', theme);
+</script>

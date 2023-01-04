@@ -2,62 +2,22 @@
 import '@styles/styles.css';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
-import { SEO } from 'astro-seo';
-
-export interface Props {
-  title: string | null;
-}
-
-const { title } = Astro.props;
-
-const DEFAULT_TITLE = 'William — freelance Frontend Engineer and Web Designer';
+import ThemeScript from './theme/ThemeScript.astro';
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="../theme-toggle.ts"></script>
-
-    <script is:inline>
-      const theme = (() => {
-        if (
-          typeof localStorage !== 'undefined' &&
-          localStorage.getItem('theme-preference')
-        ) {
-          return localStorage.getItem('theme-preference');
-        } else {
-          return window.matchMedia('(prefers-color-scheme: dark)').matches
-            ? 'dark'
-            : 'light';
-        }
-      })();
-
-      document.firstElementChild.setAttribute('data-theme', theme);
-      document
-        .querySelector('#theme-toggle')
-        ?.setAttribute('aria-label', theme);
-    </script>
-
-    <SEO
-      title={title ? `${title} | ${DEFAULT_TITLE}` : DEFAULT_TITLE}
-      description="Freelance Frontend and Design Systems Engineer"
-    />
-
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-
-    <!-- <link rel="preload" as="font" href="/fonts/custom-font.woff2" type="font/woff2" crossorigin="anonymous"> -->
-
-    <link
-      rel="icon"
-      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐡</text></svg>"
-    />
+    <ThemeScript />
+    <slot name="meta" />
   </head>
 
   <body>
     <Header />
 
-    <slot />
+    <main id="main" role="main">
+      <slot name="main" />
+    </main>
 
     <Footer />
   </body>

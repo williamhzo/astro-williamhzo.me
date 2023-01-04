@@ -23,10 +23,6 @@ window
   .matchMedia('(prefers-color-scheme: dark)')
   .addEventListener('change', onPrefersColorSchemeChange);
 
-/**
- * PRIVATE HELPERS
- */
-
 function getColorPreference() {
   if (localStorage.getItem(THEME_STORAGE_KEY)) {
     return localStorage.getItem(THEME_STORAGE_KEY) as string;
