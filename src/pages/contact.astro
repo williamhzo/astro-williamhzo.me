@@ -5,12 +5,15 @@ import PageMeta from '@layouts/seo/PageMeta.astro';
 ---
 
 <BaseLayout>
-  <PageMeta title="Contact" />
+  <PageMeta title="Contact" slot="meta" />
 
   <article class="[ wrapper ] [ prose ] [ region ]" slot="main">
     <h1>Get in touch</h1>
 
-    <p>Feel free to connect and say hi :)</p>
+    <p>
+      <a href="mailto:hi@williamhzo.me">Email me</a> at <em>hi@williamhzo.me</em
+      >, or connect via the links below:
+    </p>
 
     <ul role="list" class="[ cluster ] contact-links">
       {

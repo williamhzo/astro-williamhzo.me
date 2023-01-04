@@ -1,11 +1,11 @@
 export const LINKS = [
   {
-    label: 'twitter',
-    href: 'https://twitter.com/williamhzo',
+    label: 'mastodon',
+    href: 'https://mastodon.design/@williamhzo',
   },
   {
-    label: 'email',
-    href: 'mailto:hi@williamhzo.me',
+    label: 'twitter',
+    href: 'https://twitter.com/williamhzo',
   },
   {
     label: 'github',
@@ -14,10 +14,6 @@ export const LINKS = [
   {
     label: 'read.cv',
     href: 'https://read.cv/williamhzo',
-  },
-  {
-    label: 'mastodon',
-    href: 'https://mastodon.design/@williamhzo',
   },
   {
     label: 'codepen',
