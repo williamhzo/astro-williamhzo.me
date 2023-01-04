@@ -8,7 +8,8 @@ const notes = defineCollection({
     slug: z.string(),
     canonicalUrl: z.string().url(),
     publish: z.boolean(),
-    draft: z.boolean().default(false),
+    draft: z.boolean().default(false), // drafts are excluded from builds
+    noindex: z.boolean().default(false),
   },
 });
 

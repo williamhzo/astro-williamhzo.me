@@ -10,11 +10,16 @@ export interface Props {
 }
 
 const { post } = Astro.props;
-const { title, publishedDate, description } = post.data;
+const { title, publishedDate, description, noindex } = post.data;
 ---
 
 <BaseLayout>
-  <PageMeta title={title} description={description} slot="meta" />
+  <PageMeta
+    title={title}
+    description={description}
+    noindex={noindex}
+    slot="meta"
+  />
 
   <article class="[ wrapper ] [ region ] [ prose ]" slot="main">
     <h1>{title}</h1>
