@@ -1,4 +1,26 @@
 /* https://cube.fyi/block.html */
+/* TL;DR: Components */
+
+.skip-link {
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+  overflow: hidden;
+  clip-path: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  font-size: 80%;
+  outline: 0;
+  color: inherit;
+}
+
+.skip-link:active,
+.skip-link:focus {
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: visible;
+}
 
 .theme-toggle {
   --size: 2rem;
