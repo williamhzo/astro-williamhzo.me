@@ -1,4 +1,3 @@
 User-Agent: *
 Allow: /
-
-Sitemap: https://williamhzo.me/sitemap-0.xml
+Sitemap: https://williamhzo.me/sitemap-index.xml
