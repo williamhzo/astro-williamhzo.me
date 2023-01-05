@@ -33,6 +33,16 @@ const DEFAULT_PAGE_DESCRIPTION =
     meta: [
       { name: 'viewport', content: 'width=device-width' },
       { name: 'generator', content: 'astro-kit' },
+      {
+        name: 'theme-color',
+        content: '#9EA3FA',
+        media: '(prefers-color-scheme: dark)',
+      },
+      {
+        name: 'theme-color',
+        content: '#5941F1',
+        media: '(prefers-color-scheme: light)',
+      },
     ],
   }}
   twitter={{
