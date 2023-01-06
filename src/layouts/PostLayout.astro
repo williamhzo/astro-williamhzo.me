@@ -3,7 +3,7 @@ import Emoji from '@components/Emoji.astro';
 import BaseLayout from './BaseLayout.astro';
 import type { CollectionEntry } from 'astro:content';
 import { formatDate } from '@utils/dates.utils';
-import PageMeta from './seo/PageMeta.astro';
+import PageMeta from '@components/seo/PageMeta.astro';
 
 export interface Props {
   post: CollectionEntry<'notes'>;
