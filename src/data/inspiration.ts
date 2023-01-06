@@ -49,4 +49,9 @@ export const DESIGNS = [
     href: 'https://ui.land',
     tags: ['design engineering'],
   },
+  {
+    title: 'figma.com/about',
+    href: 'https://www.figma.com/about/',
+    tags: ['design, ui'],
+  },
 ];
