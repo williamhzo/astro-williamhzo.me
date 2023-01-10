@@ -1,11 +1,10 @@
-k---
+---
 title: 'Unlocking the "blog paralysis"'
 publishedDate: 2023-01-10
 description: 'On changing mindset about publishing blog posts.'
 slug: 'unlocking-the-blog-paralysis'
 canonicalUrl: 'https://williamhzo.me/notes/unlocking-the-blog-paralysis'
 publish: true
-
 ---
 
 As mentioned in a [previous post](https://williamhzo.me/notes/writing-on-the-web), I’ve started a blog. Surfing on the fact that 2023 is ["the year of blogging"](https://chriscoyier.net/2022/12/26/bring-back-blogging/) and personal websites, I’m trying to get in the habit of writing on here. Most posts will be about some web development and design-related stuff that I learn along the way. It will sometimes get more personal (just like this very post 🙃), as this is — after all — my very own little space on the web.
