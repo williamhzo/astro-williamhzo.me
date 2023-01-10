@@ -104,7 +104,15 @@
   color: currentcolor;
 }
 
-/* TODO: Should this be in /exceptions css? */
+.main-header a {
+  color: currentcolor;
+  text-decoration: none;
+}
+
+.main-header a:hover {
+  color: var(--accent-color);
+}
+
 .hero h1 {
   font-weight: var(--font-weight-semi-bold);
 }
@@ -117,7 +125,7 @@
   font-weight: var(--font-weight-semi-bold);
 }
 
-.site-header {
+.main-header {
   padding-block: var(--space-s-m);
 }
 

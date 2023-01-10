@@ -1,51 +1,34 @@
 ---
 import ThemeIcon from '@components/ThemeIcon.astro';
+
+const NAVIGATION_ITEMS = [
+  { label: 'home', to: '/' },
+  { label: 'about', to: '/about' },
+  { label: 'notes', to: '/notes' },
+  { label: 'inspiration', to: '/inspiration' },
+  { label: 'contact', to: '/contact' },
+  { label: 'rss', to: '/rss.xml' },
+];
 ---
 
-<header role="banner" class="site-header">
+<header role="banner" class="main-header">
   <a href="#main" class="skip-link">Skip to main content</a>
 
   <div class="[ wrapper ] [ repel ]">
     <ThemeIcon />
 
     <nav role="navigation">
-      <ul role="list" class="[ cluster ] [ nav ]">
-        <li>
-          <a rel="prefetch" href="/">home</a>
-        </li>
-
-        <li>
-          <a rel="prefetch" href="/about">about</a>
-        </li>
-
-        <li>
-          <a rel="prefetch" href="/notes">notes</a>
-        </li>
-
-        <li>
-          <a rel="prefetch" href="/inspiration">inspiration</a>
-        </li>
-
-        <li>
-          <a rel="prefetch" href="/contact">contact</a>
-        </li>
-
-        <li>
-          <a rel="prefetch" href="/rss.xml">rss</a>
-        </li>
+      <ul role="list" class="[ cluster ]">
+        {
+          NAVIGATION_ITEMS.map(({ label, to }) => (
+            <li>
+              <a rel="prefetch" href={to}>
+                {label}
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </nav>
   </div>
 </header>
-
-<style>
-  header {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  nav ul {
-    display: flex;
-    gap: var(--space-m-l);
-  }
-</style>

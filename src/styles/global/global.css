@@ -128,24 +128,6 @@ a:hover {
   text-decoration: none;
 }
 
-.nav a {
-  color: currentcolor;
-  font-weight: var(--font-weight-bold);
-}
-
-@supports (text-decoration-color: transparent) {
-  .nav a {
-    text-decoration: solid underline transparent var(--outline-size);
-    text-decoration-color: transparent;
-    text-underline-offset: 0.25rem;
-  }
-
-  .nav a:hover {
-    text-decoration-color: var(--fg-color);
-    transition: all 500ms ease-in-out;
-  }
-}
-
 :target {
   scroll-margin-top: 2ex;
 }
