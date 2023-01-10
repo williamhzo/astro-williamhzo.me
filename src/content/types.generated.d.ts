@@ -57,6 +57,13 @@ declare module 'astro:content' {
   collection: "notes",
   data: InferEntrySchema<"notes">
 },
+"02-unlocking-the-blog-paralysis.md": {
+  id: "02-unlocking-the-blog-paralysis.md",
+  slug: "02-unlocking-the-blog-paralysis",
+  body: string,
+  collection: "notes",
+  data: InferEntrySchema<"notes">
+},
 },
 
 	};
