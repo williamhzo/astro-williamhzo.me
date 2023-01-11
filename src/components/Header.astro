@@ -1,6 +1,8 @@
 ---
 import ThemeIcon from '@components/ThemeIcon.astro';
 
+const currentPath = Astro.url.pathname;
+
 const NAVIGATION_ITEMS = [
   { label: 'home', to: '/' },
   { label: 'about', to: '/about' },
@@ -21,7 +23,11 @@ const NAVIGATION_ITEMS = [
         {
           NAVIGATION_ITEMS.map(({ label, to }) => (
             <li>
-              <a rel="prefetch" href={to}>
+              <a
+                class:list={[{ active: currentPath === to }]}
+                rel="prefetch"
+                href={to}
+              >
                 {label}
               </a>
             </li>

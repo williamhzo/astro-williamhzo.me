@@ -120,6 +120,12 @@
   text-decoration: none;
 }
 
+.main-header a.active {
+  text-decoration: underline;
+  text-underline-offset: var(--outline-offset);
+  text-decoration-color: var(--accent-color);
+}
+
 .main-header a:hover {
   color: var(--accent-color);
 }
