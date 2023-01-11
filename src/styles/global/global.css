@@ -91,7 +91,6 @@ blockquote:not([class]) {
   font-size: var(--size-step-2);
 }
 
-/* Markdown blockquote:not([class])s aren't ideal, so we're presuming the person quoted is the last p */
 blockquote:not([class]) p:last-of-type {
   font-family: var(--font-base);
   font-size: var(--size-step-1);
