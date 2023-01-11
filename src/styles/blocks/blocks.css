@@ -22,23 +22,29 @@
 }
 
 .theme-toggle {
-  --size: 2rem;
+  --tap-size: 2rem;
+  --icon-size: var(--size-step-0);
   --icon-fill: var(--fg-color);
 
+  display: grid;
+  place-items: center;
   background: none;
   border: none;
   padding: 0;
-
-  inline-size: var(--size);
-  block-size: var(--size);
+  /* TODO: Find better way to align icon without this spaghetti */
+  margin-inline-start: calc(
+    -1 * ((var(--tap-size) / 2) - (var(--icon-size) / 2))
+  );
+  inline-size: var(--tap-size);
+  block-size: var(--tap-size);
   aspect-ratio: 1;
   border-radius: 50%;
   touch-action: manipulation;
 }
 
 .theme-toggle > svg {
-  inline-size: 100%;
-  block-size: 100%;
+  inline-size: var(--icon-size);
+  block-size: var(--icon-size);
   stroke-linecap: round;
 }
 
@@ -104,6 +110,11 @@
   color: currentcolor;
 }
 
+.main-header {
+  padding-block: var(--space-s-m);
+  column-gap: 0.25rem;
+}
+
 .main-header a {
   color: currentcolor;
   text-decoration: none;
@@ -123,10 +134,6 @@
 
 .hero h2 {
   font-weight: var(--font-weight-semi-bold);
-}
-
-.main-header {
-  padding-block: var(--space-s-m);
 }
 
 .site-footer {
