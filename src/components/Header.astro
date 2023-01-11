@@ -1,6 +1,6 @@
 ---
 import ThemeIcon from '@components/ThemeIcon.astro';
-import { sanitizePathname } from '@utils/sanitizePathname.utils';
+import { removeTrailingSlash } from '@utils/removeTrailingSlash.utils';
 
 const NAVIGATION_ITEMS = [
   { label: 'home', to: '/' },
@@ -10,7 +10,7 @@ const NAVIGATION_ITEMS = [
   { label: 'contact', to: '/contact' },
 ];
 
-const pathname = sanitizePathname(Astro.url.pathname);
+const pathname = removeTrailingSlash(Astro.url.pathname);
 ---
 
 <header role="banner">
