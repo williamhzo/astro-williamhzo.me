@@ -11,7 +11,7 @@ const { title, description, noindex } = Astro.props;
 
 const DEFAULT_PAGE_TITLE = 'William, freelance Frontend Engineer';
 const DEFAULT_PAGE_DESCRIPTION =
-  'Freelance Frontend and Design Systems Engineer focused on accessibility and building intuitive interfaces. Building websites for humans with progressive enhancement, accessibility, SEO and performance by design.';
+  'Freelance Frontend and Design Systems Engineer focused on accessibility and building intuitive interfaces, with progressive enhancement by design.';
 ---
 
 <!-- see https://github.com/jonasmerlin/astro-seo#readme. -->
@@ -31,7 +31,7 @@ const DEFAULT_PAGE_DESCRIPTION =
     ],
     // extending meta tags
     meta: [
-      { name: 'viewport', content: 'width=device-width' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'generator', content: 'astro-kit' },
       {
         name: 'theme-color',
