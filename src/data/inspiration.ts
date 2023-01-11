@@ -1,5 +1,10 @@
 export const DESIGNS = [
   {
+    title: 'lynnandtonic.com',
+    href: 'https://lynnandtonic.com/',
+    tags: ['experimental', 'svg'],
+  },
+  {
     title: 'inclusive-components',
     href: 'https://inclusive-components.design',
     tags: ['css', 'a11y'],
@@ -13,6 +18,11 @@ export const DESIGNS = [
     title: 'every-layout.dev',
     href: 'https://every-layout.dev',
     tags: ['css'],
+  },
+  {
+    title: 'scott.is',
+    href: 'https://www.scott.is/',
+    tags: ['typography', 'copy'],
   },
   {
     title: 'press.stripe',
