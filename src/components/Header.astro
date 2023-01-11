@@ -1,7 +1,6 @@
 ---
 import ThemeIcon from '@components/ThemeIcon.astro';
-
-const currentPath = Astro.url.pathname;
+import { sanitizePathname } from '@utils/sanitizePathname.utils';
 
 const NAVIGATION_ITEMS = [
   { label: 'home', to: '/' },
@@ -10,6 +9,8 @@ const NAVIGATION_ITEMS = [
   { label: 'inspiration', to: '/inspiration' },
   { label: 'contact', to: '/contact' },
 ];
+
+const pathname = sanitizePathname(Astro.url.pathname);
 ---
 
 <header role="banner">
@@ -24,7 +25,7 @@ const NAVIGATION_ITEMS = [
           NAVIGATION_ITEMS.map(({ label, to }) => (
             <li>
               <a
-                class:list={[{ active: currentPath === to }]}
+                class:list={[{ active: pathname === to }]}
                 rel="prefetch"
                 href={to}
               >
