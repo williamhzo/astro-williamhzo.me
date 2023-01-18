@@ -3,12 +3,13 @@ import CardLink from '@components/CardLink.astro';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import { DESIGNS } from '@data/inspiration';
 import PageMeta from '@components/seo/PageMeta.astro';
+import PageSection from '@components/PageSection.astro';
 ---
 
 <BaseLayout>
   <PageMeta title="Inspiration" slot="meta" />
 
-  <article class="[ wrapper ] [ region ] [ prose ]" slot="main">
+  <PageSection slot="main">
     <h1>Inspiration</h1>
 
     <p>Pieces of the internet that inspire, provide some learning, or both.</p>
@@ -16,5 +17,5 @@ import PageMeta from '@components/seo/PageMeta.astro';
     <ul role="list">
       {DESIGNS.map((link) => <CardLink link={link} />)}
     </ul>
-  </article>
+  </PageSection>
 </BaseLayout>

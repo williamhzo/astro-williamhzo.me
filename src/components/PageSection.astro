@@ -1,0 +1,10 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+type Props = HTMLAttributes<'article'>;
+const { class: className } = Astro.props;
+---
+
+<article class:list={['wrapper region prose', className]}>
+  <slot />
+</article>

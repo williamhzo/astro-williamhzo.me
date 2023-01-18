@@ -3,13 +3,14 @@ import Socials from '@components/Socials.astro';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Emoji from '@components/Emoji.astro';
 import PageMeta from '@components/seo/PageMeta.astro';
+import PageSection from '@components/PageSection.astro';
 ---
 
 <BaseLayout>
   <PageMeta title="" slot="meta" slot="meta" />
 
   <Fragment slot="main">
-    <article class="[ wrapper ] [ region ] [ prose ] [ hero ]">
+    <PageSection class="hero">
       <h1>
         Hi, I'm William and <em>I&nbsp;build</em> intuitive, performant & accessible
         <em>websites</em>.
@@ -29,9 +30,9 @@ import PageMeta from '@components/seo/PageMeta.astro';
         If you have project inquiries or just want to say hi, feel free to
         <a href="#contact">get in touch</a>.
       </p>
-    </article>
+    </PageSection>
 
-    <article class="[ wrapper ] [ region ] [ prose ]">
+    <PageSection>
       <h3>Crafting user-focused interfaces</h3>
 
       <p>
@@ -45,9 +46,9 @@ import PageMeta from '@components/seo/PageMeta.astro';
         strongly believe in under-engineering and using the right tool for the
         job, being for styles or fetching & displaying dynamic data.
       </p>
-    </article>
+    </PageSection>
 
-    <article class="[ wrapper ] [ region ] [ prose ]">
+    <PageSection>
       <h3>Things I can do for you</h3>
 
       <ul role="list" class="[ grid ]">
@@ -83,9 +84,9 @@ import PageMeta from '@components/seo/PageMeta.astro';
           <p>Set up a Content Management System (CMS) for your team.</p>
         </li>
       </ul>
-    </article>
+    </PageSection>
 
-    <article id="contact" class="[ wrapper ] [ region ] [ prose ]">
+    <PageSection id="contact">
       <h3>Connect</h3>
 
       <p>
@@ -110,9 +111,9 @@ import PageMeta from '@components/seo/PageMeta.astro';
       </p>
 
       <Socials />
-    </article>
+    </PageSection>
 
-    <article class="[ wrapper ] [ region ] [ prose ]">
+    <PageSection>
       <h3>Currently I'm...</h3>
 
       <ul role="list" class="[ flow ]">
@@ -173,6 +174,6 @@ import PageMeta from '@components/seo/PageMeta.astro';
           </small>
         </p>
       </ul>
-    </article>
+    </PageSection>
   </Fragment>
 </BaseLayout>
