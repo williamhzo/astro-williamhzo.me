@@ -1,5 +1,6 @@
 :root {
   /* Colors */
+
   --color-base-light: hsl(0, 0%, 98%);
   --color-base-dark: hsl(251, 41%, 8%);
   --color-accent-dark: hsl(237, 90%, 80%);
@@ -40,7 +41,7 @@
   --line-height-tight: 1;
 
   /**
-    * Font sizes and space scales generated with Utopia (https://utopia.fyi/): 
+    * Font sizes and space scales generated with Utopia (https://utopia.fyi/):
     *
     * parameters:
     * min viewport: 320px, font-size: 16px, scale: 1.2

@@ -5,21 +5,41 @@ type Props = {
   title: string;
   description?: string;
   noindex?: boolean;
+  og?: {
+    title: string;
+    type: string;
+    description: string;
+    image: string;
+  };
 };
 
-const { title, description, noindex } = Astro.props;
+const { title, description, noindex, og } = Astro.props;
 
 const DEFAULT_PAGE_TITLE = 'William, freelance Frontend Engineer';
 const DEFAULT_PAGE_DESCRIPTION =
   'Passionate about Design Systems and intuitive User Interfaces, focused on accessibility, SEO and User Experience.';
+
+const page = {
+  title: title ? `${title} | ${DEFAULT_PAGE_TITLE}` : DEFAULT_PAGE_TITLE,
+  description: description || DEFAULT_PAGE_DESCRIPTION,
+};
+
+const openGraph = {
+  title: og?.title || page.title,
+  type: og?.type || 'website',
+  image: og?.image || '/images/og-generic.png',
+  url: 'https://williamhzo.me/',
+  description: page.description,
+};
 ---
 
 <!-- see https://github.com/jonasmerlin/astro-seo#readme. -->
 <SEO
-  title={title ? `${title} | ${DEFAULT_PAGE_TITLE}` : DEFAULT_PAGE_TITLE}
-  description={description || DEFAULT_PAGE_DESCRIPTION}
+  title={page.title}
+  description={page.description}
   charset="UTF-8"
   noindex={noindex || false}
+  openGraph={{ basic: { ...openGraph } }}
   extend={{
     // extending link tags
     link: [
@@ -43,21 +63,12 @@ const DEFAULT_PAGE_DESCRIPTION =
         content: '#5941F1',
         media: '(prefers-color-scheme: light)',
       },
+      { name: 'twitter:image', content: openGraph.image },
+      { name: 'twitter:title', content: openGraph.title },
+      { name: 'twitter:description', content: openGraph.description },
     ],
   }}
   twitter={{
     creator: '@williamhzo',
   }}
 />
-
-<!--
-  // TODO:
-  openGraph={{
-    basic: { title: og.title, type: og.type, image: og.image }
-  }}
-  meta: [
-    { name: 'twitter:image', content: og.image },
-    { name: 'twitter:title', content: og.title },
-    { name: 'twitter:description', content: og.description }
-  ]
--->
