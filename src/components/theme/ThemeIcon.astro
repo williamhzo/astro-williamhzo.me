@@ -1,0 +1,131 @@
+---
+---
+
+<button
+  id="theme-toggle"
+  class="theme-toggle"
+  title="Toggles light & dark themes"
+  aria-label="auto"
+  aria-live="polite"
+>
+  <svg
+    class="sun-and-moon"
+    aria-hidden="true"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+  >
+    <circle
+      class="sun"
+      cx="12"
+      cy="12"
+      r="6"
+      mask="url(#moon-mask)"
+      fill="currentColor"></circle>
+
+    <g class="sun-beams" stroke="currentColor">
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </g>
+
+    <mask class="moon" id="moon-mask">
+      <rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
+      <circle cx="24" cy="10" r="6" fill="black"></circle>
+    </mask>
+  </svg>
+
+  <span class="sr-only">Toggles light & dark themes</span>
+</button>
+
+<style is:global>
+  .theme-toggle {
+    --tap-size: 2rem;
+    --icon-size: var(--size-step-0);
+    --icon-fill: var(--fg-color);
+
+    display: grid;
+    place-items: center;
+    background: none;
+    border: none;
+    padding: 0;
+    /* TODO: Find better way to align icon without this spaghetti */
+    margin-inline-start: calc(
+      -1 * ((var(--tap-size) / 2) - (var(--icon-size) / 2))
+    );
+    inline-size: var(--tap-size);
+    block-size: var(--tap-size);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    touch-action: manipulation;
+  }
+
+  .theme-toggle > svg {
+    inline-size: var(--icon-size);
+    block-size: var(--icon-size);
+    stroke-linecap: round;
+  }
+
+  .sun-and-moon > :is(.moon, .sun, .sun-beams) {
+    transform-origin: center center;
+  }
+
+  .sun-and-moon > :is(.moon, .sun) {
+    fill: var(--icon-fill);
+  }
+
+  .sun-and-moon > .sun-beams {
+    stroke: var(--icon-fill);
+    stroke-width: 2px;
+  }
+
+  [data-theme='dark'] .sun-and-moon .sun {
+    transform: scale(1.75);
+  }
+
+  [data-theme='dark'] .sun-and-moon > .sun-beams {
+    opacity: 0;
+  }
+
+  [data-theme='dark'] .sun-and-moon > .moon > circle {
+    transform: translateX(-7px);
+    transition: transform var(--duration-sm) ease;
+    transition-delay: var(--duration-sm);
+    transition-duration: var(--duration-md);
+  }
+
+  @supports (cx: 1) {
+    [data-theme='dark'] .sun-and-moon > .moon > circle {
+      transform: translateX(0);
+      cx: 17;
+      transition: cx var(--duration-sm) ease;
+    }
+  }
+
+  .sun {
+    transition: transform var(--transition-fade);
+  }
+
+  .sun-and-moon > .sun {
+    transition: transform var(--transition-fade);
+  }
+
+  .sun-and-moon > .sun-beams {
+    transition: transform var(--transition-fade), opacity var(--transition-fade);
+  }
+
+  [data-theme='dark'] .sun-and-moon > .sun {
+    transform: scale(1.75);
+    transition: transform var(--duration-sm) ease;
+  }
+
+  [data-theme='dark'] .sun-and-moon > .sun-beams {
+    transform: rotateZ(-25deg);
+    transition-duration: 0.15s;
+  }
+</style>

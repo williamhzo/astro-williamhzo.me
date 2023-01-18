@@ -1,5 +1,5 @@
 ---
-import ThemeIcon from '@components/ThemeIcon.astro';
+import ThemeIcon from '@components/theme/ThemeIcon.astro';
 import { removeTrailingSlash } from '@utils/removeTrailingSlash.utils';
 
 const NAVIGATION_ITEMS = [
@@ -38,3 +38,45 @@ const pathname = removeTrailingSlash(Astro.url.pathname);
     </nav>
   </div>
 </header>
+
+<style>
+  .skip-link {
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    font-size: 80%;
+    outline: 0;
+    color: inherit;
+  }
+
+  .skip-link:active,
+  .skip-link:focus {
+    clip: auto;
+    height: auto;
+    width: auto;
+    overflow: visible;
+  }
+
+  .main-header {
+    padding-block: var(--space-s-m);
+    column-gap: 0.25rem;
+  }
+
+  .main-header a {
+    color: currentcolor;
+    text-decoration: none;
+  }
+
+  .main-header a.active {
+    text-decoration: underline;
+    text-underline-offset: var(--outline-offset);
+    text-decoration-color: var(--accent-color);
+  }
+
+  .main-header a:hover {
+    color: var(--accent-color);
+  }
+</style>

@@ -6,7 +6,7 @@
   --grid-min-item-size: clamp(16rem, 50vw, 26rem);
 }
 
-/* EXAMPLE, NOT USED CURRENTLY: */
+/* EXAMPLE ONLY, NOT USED CURRENTLY (TODO: add fallback for progressive enhancement) */
 
 /* .grid[data-rows='masonry'] {
   grid-template-rows: masonry;

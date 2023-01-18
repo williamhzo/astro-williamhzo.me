@@ -29,3 +29,21 @@ import PageSection from '@components/PageSection.astro';
     </ul>
   </PageSection>
 </BaseLayout>
+
+<style>
+  .contact-links {
+    --cluster-direction: column;
+    --cluster-vertical-alignment: flex-start;
+  }
+
+  .contact-link {
+    color: var(--fg-color);
+  }
+
+  .contact-link span {
+    font-weight: var(--font-weight-semi-bold);
+    color: var(--accent-color);
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+  }
+</style>

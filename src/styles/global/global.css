@@ -86,6 +86,11 @@ em {
   font-style: normal;
 }
 
+time {
+  font-size: var(--size-step--1);
+  color: var(--accent-color);
+}
+
 blockquote:not([class]) {
   font-family: var(--font-serif);
   font-size: var(--size-step-2);

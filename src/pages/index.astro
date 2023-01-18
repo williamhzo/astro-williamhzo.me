@@ -177,3 +177,25 @@ import PageSection from '@components/PageSection.astro';
     </PageSection>
   </Fragment>
 </BaseLayout>
+
+<style>
+  .hero h1 {
+    font-weight: var(--font-weight-semi-bold);
+  }
+
+  .hero em {
+    font-style: normal;
+  }
+
+  .hero h2 {
+    font-weight: var(--font-weight-semi-bold);
+  }
+
+  .card {
+    /* TODO: Use Cluster utility instead? */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+</style>

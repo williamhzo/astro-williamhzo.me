@@ -38,3 +38,17 @@ const sortedPosts = [...posts].sort(
     </ul>
   </PageSection>
 </BaseLayout>
+
+<style>
+  .posts-list li {
+    --flow-space: var(--space-2xs-xs);
+    border-inline-start: var(--outline-size) solid var(--accent-color);
+    padding-inline-start: var(--space-s-m);
+  }
+
+  .posts-list a {
+    font-size: var(--size-step-2);
+    font-weight: var(--font-weight-heading);
+    font-family: var(--font-heading);
+  }
+</style>
