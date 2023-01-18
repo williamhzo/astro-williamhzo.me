@@ -10,6 +10,7 @@ type Props = {
     type: string;
     description: string;
     image: string;
+    alt: string;
   };
 };
 
@@ -17,7 +18,7 @@ const { title, description, noindex, og } = Astro.props;
 
 const DEFAULT_PAGE_TITLE = 'William, freelance Frontend Engineer';
 const DEFAULT_PAGE_DESCRIPTION =
-  'Passionate about Design Systems and intuitive User Interfaces, focused on accessibility, SEO and User Experience.';
+  'Passionate about Design Systems and intuitive User Interfaces, focused on accessibility, SEO and UX.';
 
 const page = {
   title: title ? `${title} | ${DEFAULT_PAGE_TITLE}` : DEFAULT_PAGE_TITLE,
@@ -25,9 +26,10 @@ const page = {
 };
 
 const openGraph = {
-  title: og?.title || page.title,
+  title: og?.title || "William's blog — williamhzo.me",
   type: og?.type || 'website',
   image: og?.image || '/images/og-generic.png',
+  alt: og?.alt || "williamhzo.me's website social image",
   url: 'https://williamhzo.me/',
   description: page.description,
 };
@@ -39,7 +41,16 @@ const openGraph = {
   description={page.description}
   charset="UTF-8"
   noindex={noindex || false}
-  openGraph={{ basic: { ...openGraph } }}
+  openGraph={{
+    basic: {
+      title: openGraph.title,
+      type: openGraph.type,
+      image: openGraph.image,
+    },
+    image: {
+      alt: openGraph.alt,
+    },
+  }}
   extend={{
     // extending link tags
     link: [
