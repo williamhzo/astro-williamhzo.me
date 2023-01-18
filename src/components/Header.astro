@@ -16,11 +16,11 @@ const pathname = removeTrailingSlash(Astro.url.pathname);
 <header role="banner">
   <a href="#main" class="skip-link">Skip to main content</a>
 
-  <div class="[ wrapper ] [ repel ] main-header">
+  <div class="wrapper repel main-header">
     <ThemeIcon />
 
     <nav role="navigation">
-      <ul role="list" class="[ cluster ]">
+      <ul role="list" class="cluster">
         {
           NAVIGATION_ITEMS.map(({ label, to }) => (
             <li>

@@ -21,7 +21,7 @@ const { title, publishedDate, description, noindex } = post.data;
     slot="meta"
   />
 
-  <article class="[ wrapper ] [ region ] [ prose ]" slot="main">
+  <article class="wrapper region prose" slot="main">
     <h1>{title}</h1>
 
     <time datetime={publishedDate.toISOString()}>

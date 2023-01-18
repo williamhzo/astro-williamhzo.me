@@ -18,10 +18,10 @@ const sortedPosts = [...posts].sort(
   <PageSection slot="main">
     <h1>Latest notes</h1>
 
-    <ul role="list" class="[ posts-list ] [ flow ]">
+    <ul role="list" class="flow posts-list">
       {
         sortedPosts.map(({ data }) => (
-          <li class="[ flow ]">
+          <li class="flow">
             <a href={`/notes/${data.slug}`} rel="prefetch">
               {data.title}
             </a>
