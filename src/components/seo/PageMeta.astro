@@ -1,11 +1,11 @@
 ---
 import { SEO } from 'astro-seo';
 
-interface Props {
+type Props = {
   title: string;
   description?: string;
   noindex?: boolean;
-}
+};
 
 const { title, description, noindex } = Astro.props;
 

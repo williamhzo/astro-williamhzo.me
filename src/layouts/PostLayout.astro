@@ -5,9 +5,9 @@ import type { CollectionEntry } from 'astro:content';
 import { formatDate } from '@utils/dates.utils';
 import PageMeta from '@components/seo/PageMeta.astro';
 
-export interface Props {
+type Props = {
   post: CollectionEntry<'notes'>;
-}
+};
 
 const { post } = Astro.props;
 const { title, publishedDate, description, noindex } = post.data;
