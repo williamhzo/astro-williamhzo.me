@@ -3,14 +3,14 @@ import Socials from '@components/Socials.astro';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Emoji from '@components/Emoji.astro';
 import PageMeta from '@components/seo/PageMeta.astro';
-import PageSection from '@components/PageSection.astro';
+import Article from '@components/Article.astro';
 ---
 
 <BaseLayout>
   <PageMeta slot="meta" />
 
   <Fragment slot="main">
-    <PageSection class="hero">
+    <Article class="hero">
       <h1>
         Hi, I'm William and <em>I&nbsp;build</em> intuitive, performant & accessible
         <em>websites</em>.
@@ -30,9 +30,9 @@ import PageSection from '@components/PageSection.astro';
         If you have project inquiries or just want to say hi, feel free to
         <a href="#contact">get in touch</a>.
       </p>
-    </PageSection>
+    </Article>
 
-    <PageSection>
+    <Article>
       <h3>Crafting user-focused interfaces</h3>
 
       <p>
@@ -46,9 +46,9 @@ import PageSection from '@components/PageSection.astro';
         strongly believe in under-engineering and using the right tool for the
         job, being for styles or fetching & displaying dynamic data.
       </p>
-    </PageSection>
+    </Article>
 
-    <PageSection>
+    <Article>
       <h3>Things I can do for you</h3>
 
       <ul role="list" class="grid">
@@ -84,9 +84,9 @@ import PageSection from '@components/PageSection.astro';
           <p>Set up a Content Management System (CMS) for your team.</p>
         </li>
       </ul>
-    </PageSection>
+    </Article>
 
-    <PageSection id="contact">
+    <Article id="contact">
       <h3>Connect</h3>
 
       <p>
@@ -111,9 +111,9 @@ import PageSection from '@components/PageSection.astro';
       </p>
 
       <Socials />
-    </PageSection>
+    </Article>
 
-    <PageSection>
+    <Article>
       <h3>Currently I'm...</h3>
 
       <ul role="list" class="flow">
@@ -174,7 +174,7 @@ import PageSection from '@components/PageSection.astro';
           </small>
         </p>
       </ul>
-    </PageSection>
+    </Article>
   </Fragment>
 </BaseLayout>
 

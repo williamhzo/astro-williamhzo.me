@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import PageMeta from '@components/seo/PageMeta.astro';
 import { formatDate } from '@utils/dates.utils';
-import PageSection from '@components/PageSection.astro';
+import Article from '@components/Article.astro';
 
 // getting published posts and sorting them by decreasing published date
 const posts = await getCollection('notes', ({ data }) => data.publish === true);
@@ -15,7 +15,7 @@ const sortedPosts = [...posts].sort(
 <BaseLayout>
   <PageMeta title="Notes" slot="meta" />
 
-  <PageSection slot="main">
+  <Article slot="main">
     <h1>Latest notes</h1>
 
     <ul role="list" class="flow posts-list">
@@ -36,7 +36,7 @@ const sortedPosts = [...posts].sort(
         ))
       }
     </ul>
-  </PageSection>
+  </Article>
 </BaseLayout>
 
 <style>

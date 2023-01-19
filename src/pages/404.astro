@@ -1,13 +1,13 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 import PageMeta from '@components/seo/PageMeta.astro';
-import PageSection from '@components/PageSection.astro';
+import Article from '@components/Article.astro';
 ---
 
 <BaseLayout>
   <PageMeta title="Not found" slot="meta" />
 
-  <PageSection slot="main">
+  <Article slot="main">
     <h1>Page not found...</h1>
 
     <p>
@@ -16,5 +16,5 @@ import PageSection from '@components/PageSection.astro';
     </p>
 
     <p>Either way, <a href="/">returning to the homepage</a> may help.</p>
-  </PageSection>
+  </Article>
 </BaseLayout>

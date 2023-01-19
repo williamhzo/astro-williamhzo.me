@@ -2,13 +2,13 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 import { LINKS } from '@data/links';
 import PageMeta from '@components/seo/PageMeta.astro';
-import PageSection from '@components/PageSection.astro';
+import Article from '@components/Article.astro';
 ---
 
 <BaseLayout>
   <PageMeta title="Contact" slot="meta" />
 
-  <PageSection slot="main">
+  <Article slot="main">
     <h1>Get in touch</h1>
 
     <p>
@@ -27,7 +27,7 @@ import PageSection from '@components/PageSection.astro';
         ))
       }
     </ul>
-  </PageSection>
+  </Article>
 </BaseLayout>
 
 <style>

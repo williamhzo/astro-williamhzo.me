@@ -2,14 +2,14 @@
 import Emoji from '@components/Emoji.astro';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import PageMeta from '@components/seo/PageMeta.astro';
-import PageSection from '@components/PageSection.astro';
+import Article from '@components/Article.astro';
 ---
 
 <BaseLayout>
   <PageMeta title="About" slot="meta" />
 
   <Fragment slot="main">
-    <PageSection>
+    <Article>
       <h1>About me</h1>
 
       <p>
@@ -55,9 +55,9 @@ import PageSection from '@components/PageSection.astro';
           href="/contact">contact links</a
         >.
       </p>
-    </PageSection>
+    </Article>
 
-    <PageSection>
+    <Article>
       <h2>This website</h2>
 
       <p>
@@ -103,6 +103,6 @@ import PageSection from '@components/PageSection.astro';
           >Pull Request</a
         >!
       </p>
-    </PageSection>
+    </Article>
   </Fragment>
 </BaseLayout>
