@@ -53,9 +53,9 @@ For example, design files will contain a canvas for a mobile viewport (screen si
 
 These values are often arbitrary and tend to represent the average device size, such as:
 
-- mobile: `375px` x `629px` (iPhone 12)
-- tablet: `584px` x `806px` (Galaxy Tab S7+)
-- desktop: `1280px` x `800px` (average laptop)
+- mobile: 375 x 629px (iPhone 12)
+- tablet: 584 x 806px (Galaxy Tab S7+)
+- desktop: 1280 x 800px (average laptop)
 
 But what happens for all the devices with viewport widths and heights in-between and out of the limits above?
 
