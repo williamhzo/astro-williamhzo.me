@@ -64,6 +64,13 @@ declare module 'astro:content' {
   collection: "notes",
   data: InferEntrySchema<"notes">
 },
+"03-letting-go-of-pixel-perfect.md": {
+  id: "03-letting-go-of-pixel-perfect.md",
+  slug: "03-letting-go-of-pixel-perfect",
+  body: string,
+  collection: "notes",
+  data: InferEntrySchema<"notes">
+},
 },
 
 	};
