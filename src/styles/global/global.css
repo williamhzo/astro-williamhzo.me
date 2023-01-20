@@ -168,23 +168,25 @@ aside {
   transition-property: color, background, filter;
 }
 
-fieldset {
-  border: none;
-}
-
-input,
-textarea {
-  border: 2px solid var(--fg-color);
-  border-radius: var(--border-radius-sm);
-  resize: vertical;
-  padding: 0.3rem 1rem;
-  background-color: transparent;
-  color: var(--fg-color);
-}
-
-hr {
+/* hr {
   border: none;
   height: 1px;
+  background-color: var(--bg-color-subtle); */
+/* TODO: Solve this, along with the li problem */
+/* margin-block: var(--space-2xl); */
+/* } */
+
+p > code,
+li > code,
+a > code {
+  padding: 2px 4px;
+  border-radius: var(--border-radius-sm);
   background-color: var(--bg-color-subtle);
-  margin-block: var(--space-2xl);
+  color: var(--accent-color);
+  font-size: var(--size-step-0);
+}
+
+pre {
+  padding: var(--space-2xs-xs);
+  border-radius: var(--border-radius-sm);
 }

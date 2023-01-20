@@ -12,6 +12,13 @@ export default defineConfig({
     }),
     prefetch(),
   ],
+  markdown: {
+    syntaxHighlight: 'shiki',
+    shikiConfig: {
+      theme: 'nord',
+      wrap: false,
+    },
+  },
   experimental: {
     contentCollections: true,
   },
