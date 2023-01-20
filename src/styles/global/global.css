@@ -167,13 +167,12 @@ aside {
   transition-property: color, background, filter;
 }
 
-/* hr {
+hr {
   border: none;
   height: 1px;
-  background-color: var(--bg-color-subtle); */
-/* TODO: Solve this, along with the li problem */
-/* margin-block: var(--space-2xl); */
-/* } */
+  background-color: var(--bg-color-subtle);
+  margin-block: var(--space-xl) !important;
+}
 
 p > code,
 li > code,
