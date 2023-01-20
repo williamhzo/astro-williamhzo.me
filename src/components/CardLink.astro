@@ -16,7 +16,7 @@ const {
   <a href={href} class="repel card-link">
     <span>{title}</span>
 
-    <hr />
+    <hr class="separator" />
 
     <small>
       {tags.join(', ')}
@@ -62,11 +62,8 @@ const {
     color: var(--fg-color);
   }
 
-  .card-link hr {
+  hr.separator {
     flex: 1 1 0%;
-    height: 1px;
-    border: none;
-    background-color: var(--bg-color-subtle);
-    margin: 0;
+    margin: 0 !important;
   }
 </style>

@@ -7,8 +7,6 @@ canonicalUrl: 'https://williamhzo.me/notes/letting-go-of-pixel-perfect'
 publish: true
 ---
 
-<!-- FIND A POST TITLE -->
-
 Behind this catchy headline lies a mental shift I’ve observed at some point, which changed how I see static design assets (like [Sketch](oversights) or [Figma](https://www.figma.com/) wireframes), and therefore how I write CSS and build User Interfaces.
 
 Building for the web today means that we ship websites that work for everyone, regardless of the end user’s device: a shiny new MacBook Pro, a 5K display, a smartwatch, or even the [screen of a fridge](https://www.samsung.com/us/explore/family-hub-refrigerator/overview/).
@@ -59,7 +57,7 @@ These values are often arbitrary and tend to represent the average device size, 
 
 But what happens for all the devices with viewport widths and heights in-between and out of the limits above?
 
-As mentioned by Andy Bell's [buildexcellentwebsit.es](https://buildexcellentwebsit.es/), there are thousands of different devices out there in the wild, each and every one with its unique viewport. We have no clue on which screen size our website will be viewed.
+As mentioned by Andy Bell's [buildexcellentwebsit.es](https://buildexcellentwebsit.es/), there are _thousands of different devices_ out there in the wild, each and every one with its unique viewport. We have no clue on which screen size our website will be viewed.
 
 ## The illusion of control
 
@@ -89,7 +87,7 @@ Enter [Every Layout](https://every-layout.dev/). This is a goldmine of pure CSS 
 
 As the name states, (almost) all the basic layouts are covered and are easily configurable with CSS variables. It's not a library nor a framework, just good old CSS to copy/paste.
 
-### Solving the fluid spacing and font size
+### Solving the fluid spacing and font sizes
 
 One of the key discoveries from [buildexcellentwebsit.es](https://buildexcellentwebsit.es/) is the amazing tool [Utopia](https://utopia.fyi/).
 

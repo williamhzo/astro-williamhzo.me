@@ -38,6 +38,24 @@
   max-inline-size: var(--measure);
 }
 
+.prose li::marker {
+  color: var(--accent-color);
+}
+
+/* TODO: Not used
+.bullet-list li + li {
+  margin-block-start: var(--space-2xs);
+}
+.bullet-list :is(ol, ul) {
+  padding-inline-start: 1em;
+}
+
+@media (min-width: 50em) {
+  .bullet-list :is(ol, ul) {
+    padding-inline-start: 0;
+  }
+} */
+
 .sr-only {
   border: 0 !important;
   clip: rect(1px, 1px, 1px, 1px) !important;

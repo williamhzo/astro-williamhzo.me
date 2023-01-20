@@ -65,7 +65,7 @@ const { title, publishedDate, description, noindex } = post.data;
   </article>
 </BaseLayout>
 
-<style is:global>
+<style>
   .post-description {
     font-style: italic;
   }
@@ -76,4 +76,20 @@ const { title, publishedDate, description, noindex } = post.data;
     border-radius: var(--space-2xs);
     margin-block-end: var(--space-2xl);
   }
+
+  /* FIXME: Not cascaded to blog post */
+  /* ol > li + li,
+  ul > li + li {
+    margin-block-start: var(--space-s);
+  }
+
+  :is(ol, ul) {
+    padding-inline-start: 1em;
+  }
+
+  @media (min-width: 50em) {
+    :is(ol, ul) {
+      padding-inline-start: 0;
+    }
+  } */
 </style>
