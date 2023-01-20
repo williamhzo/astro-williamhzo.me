@@ -30,27 +30,26 @@ body {
 
 /* Base typesetting */
 
+h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  font-weight: var(--font-weight-heading);
 }
 
 h1,
 h2,
 h3 {
+  font-weight: var(--font-weight-base);
   line-height: var(--line-height-tight);
-  letter-spacing: var(--tracking-s);
+  letter-spacing: var(--tracking-l);
   max-width: 24ch;
 }
 
 h1 {
-  font-family: var(--font-heading);
   font-size: var(--size-step-3);
-  font-weight: var(--font-weight-base);
 }
 
 h2 {
@@ -64,8 +63,8 @@ h3 {
 h4,
 h5,
 h6 {
-  font-size: var(--size-step-1);
-  font-weight: var(--font-weight-semi-bold);
+  font-size: var(--size-step-0);
+  font-weight: var(--font-weight-bold);
 }
 
 /* Set line lengths */

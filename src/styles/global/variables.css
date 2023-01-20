@@ -18,7 +18,6 @@
   --font-weight-semi-bold: 500;
   --font-weight-bold: 700;
   --font-heading: 'Outfit', var(--font-base);
-  --font-weight-heading: var(--font-weight-bold);
   --measure: 55ch;
   --outline-offset: 0.25rem;
   --outline-size: 2px;
@@ -34,7 +33,7 @@
   --transition-movement: var(--duration-sm) linear;
   --transition-fade: var(--duration-md) ease;
   --transition-bounce: var(--duration-md) cubic-bezier(0.5, 0.05, 0.2, 1.5);
-  --tracking-test: -0.02ch;
+  --tracking-l: -0.01ch;
   --tracking: -0.05ch;
   --tracking-s: -0.07ch;
   --line-height-base: 1.4;
