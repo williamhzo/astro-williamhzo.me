@@ -126,6 +126,7 @@ svg:hover {
 
 a {
   color: var(--accent-color);
+  text-underline-offset: 2px;
 }
 
 a:hover {
@@ -179,4 +180,11 @@ textarea {
   padding: 0.3rem 1rem;
   background-color: transparent;
   color: var(--fg-color);
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--bg-color-subtle);
+  margin-block: var(--space-2xl);
 }

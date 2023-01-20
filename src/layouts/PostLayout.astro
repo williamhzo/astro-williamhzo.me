@@ -4,6 +4,7 @@ import BaseLayout from './BaseLayout.astro';
 import type { CollectionEntry } from 'astro:content';
 import { formatDate } from '@utils/dates.utils';
 import PageMeta from '@components/seo/PageMeta.astro';
+import Socials from '@components/Socials.astro';
 
 type Props = {
   post: CollectionEntry<'notes'>;
@@ -32,11 +33,26 @@ const { title, publishedDate, description, noindex } = post.data;
 
     <slot />
 
-    <p>Until next time!</p>
+    <p>Until next time! <Emoji emoji="🐡" label="blowfish" /></p>
 
-    <p>
-      William <Emoji emoji="🐡" label="blowfish" />
-    </p>
+    <div>
+      <hr />
+    </div>
+
+    <div class="flow author">
+      <p>
+        Hey <Emoji emoji="👋" label="waving hand" />, I'm William and I build
+        intuitive and inclusive websites & User Interfaces, with a deep interest
+        in design.
+      </p>
+
+      <p>
+        Feel free to <a href="/contact">get in touch</a> if you have a project in
+        mind or simply want to say hi, always down for a chat!
+      </p>
+
+      <Socials />
+    </div>
 
     <p>
       <small>
@@ -52,5 +68,12 @@ const { title, publishedDate, description, noindex } = post.data;
 <style is:global>
   .post-description {
     font-style: italic;
+  }
+
+  .author {
+    padding: var(--space-s-m);
+    border: 1px solid var(--bg-color-subtle);
+    border-radius: var(--space-2xs);
+    margin-block-end: var(--space-2xl);
   }
 </style>
