@@ -188,3 +188,7 @@ pre {
   padding: var(--space-2xs-xs);
   border-radius: var(--border-radius-sm);
 }
+
+article > :is(h1, h2, h3, h4, h5, h6) {
+  text-transform: lowercase;
+}
