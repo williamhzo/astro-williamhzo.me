@@ -19,13 +19,11 @@ Building for the web today means that we ship websites that work for everyone, r
 
 ## The illusion of the source of truth
 
-Wireframes are often seen as the unique, irrefutable _source of truth_. In that sense spacings, font sizes, line heights, widths, and heights (to name a few) need to be a 1:1 match between design assets and production code.
+Wireframes are often seen as the unique, irrefutable _source of truth_. In that sense spacings, font sizes, line heights, widths, and heights (to name a few) would need to be a perfect 1:1 match between design assets and production code.
 
-That's what is often wrongfully flagged as "pixel-perfect" development: when given a "final" design (i.e. approved by stakeholders), the developer's job is to implement it following the exact same pixel values mentioned above.
+This is often flagged as "pixel-perfect" development: when given a "final" design (i.e. approved by stakeholders), the developer's job would only be to implement it following the exact same pixel values in the wireframes.
 
-Moreover, most design-system-related content is contained within these design assets. It's fairly common to use Figma or Sketch files to design and define the component library's elements, icons, brand's [design tokens](https://spectrum.adobe.com/page/design-tokens/#Introduction), documentation & guidelines, etc.
-
-This coupled with the fact that many teams work in a traditional linear way regarding a project's lifecycle, something along the lines of:
+This coupled with the fact that some teams work in a traditional linear way regarding a project's lifecycle, something along the lines of:
 
 1. research
 2. sketches/prototypes/low-fidelity wireframes
@@ -33,7 +31,7 @@ This coupled with the fact that many teams work in a traditional linear way rega
 4. high-fidelity wireframes
 5. integration/development
 
-This means developers (or engineers, depending on the team) arrive very late to the party, and therefore most of the project's lifecycle is done within the design tools (steps 1 to 4).
+This means developers (or engineers, depending on the team) are invited very late to the party, and therefore most of the project's lifecycle is done within the design tools (steps 1 to 4).
 
 ---
 
@@ -43,35 +41,35 @@ This means developers (or engineers, depending on the team) arrive very late to 
 
 All this contributes to the fact that design assets are considered a specification and a unique source of truth, meaning that deviation from these specs is considered harmful and not desirable.
 
-## Design assets are static
+## But... design assets are static
 
 Most designs are done on a canvas with fixed height and width, which means that [responsiveness](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) is simulated by multiplying the design on several canvases with different heights and widths.
 
 For example, design files will contain a canvas for a mobile viewport (screen size), one for a tablet, and another one for a desktop.
 
-These values are often arbitrary and tend to represent the average device size, such as:
+These values are often arbitrary and tend to represent the average device size, such as, for example:
 
 - mobile: 375 x 629px (iPhone 12)
 - tablet: 584 x 806px (Galaxy Tab S7+)
 - desktop: 1280 x 800px (average laptop)
 
-But what happens for all the devices with viewport widths and heights in-between and out of the limits above?
+But what happens for all the devices with screen sizes in-between or out of the limits above?
 
 As mentioned by Andy Bell's [buildexcellentwebsit.es](https://buildexcellentwebsit.es/), there are _thousands of different devices_ out there in the wild, each and every one with its unique viewport. We have no clue on which screen size our website will be viewed.
 
 ## The illusion of control
 
-The traditional way of dealing with this is adding [width media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/width) in our CSS on the breakpoints provided by the design (the 3 device sizes mentioned above, for example). In that way, we ensure that for every device size provided in the wireframes, the design is the same.
+The traditional way of dealing with this is adding [`width` media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/width) in our CSS on the breakpoints provided by the design. In that way, we ensure that for every device size provided in the wireframes, the design is the same.
 
 We managed to control exactly when to wrap this sidebar, or these navigation menu items, the exact way that they were thought by the designer.
 
 But it feels clunky.
 
-Of course, our users will likely not resize browser windows to test responsiveness, but media query breakpoints rarely solve (nor detect) visual bugs and inconsistencies in the UI: large horizontal spacing right after wrapping an element, or some reduced `font-size` that seems too large for a tablet.
+Of course, our users will likely not resize browser windows to test responsiveness, but media query breakpoints rarely solve (nor detect) visual bugs and inconsistencies in the UI: large horizontal spacing right after wrapping an element, or some decreased `font-size` for a mobile phone screen that feels too small for a tablet.
 
 ## Letting go of pixel-perfect
 
-The end user doesn't care if the production code reflects 1:1 the sizes provided in the design assets. The end user cares about an optimal, consistent, and intuitive experience.
+The end user doesn't care if the production code reflects 1:1 the sizes provided in the design assets. The end user cares about _optimal_, _consistent_, and _intuitive_ experiences.
 
 CSS is awesome. Our browsers are very capable nowadays and are very good at interpolating values with the right input.
 
@@ -85,7 +83,7 @@ Some amazing tools and methodologies exist nowadays to overcome this. I'll brief
 
 Enter [Every Layout](https://every-layout.dev/). This is a goldmine of pure CSS utilities to build fluid robust layouts, _without any media queries_.
 
-As the name states, (almost) all the basic layouts are covered and are easily configurable with CSS variables. It's not a library nor a framework, just good old CSS to copy/paste.
+As the name states, (almost) all the basic layouts are covered and are easily configurable with CSS variables. It's not a library nor a framework, just good old plain CSS to drop in our project.
 
 ### Solving the fluid spacing and font sizes
 
@@ -99,4 +97,6 @@ I don't consider media queries as a code smell per se, but in the name of contro
 
 They're a perfect example of trying to imperatively style every element in the UI, whereas CSS is designed to be declarative — Jeremy Keith puts it way better than I do in his [dedicated blog post](https://adactio.com/journal/18982).
 
-Quick note after re-reading this post: the reasons above are the very same reasons why Tailwind doesn't click for me, imperative vs declarative.
+As Andy puts it: "Be the browser's mentor, not its micromanager".
+
+P.S.: quick note after re-reading this post: the reasons above are the very same reasons why Tailwind doesn't click for me, imperative vs declarative.
