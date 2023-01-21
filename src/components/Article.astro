@@ -2,9 +2,13 @@
 import type { HTMLAttributes } from 'astro/types';
 
 type Props = HTMLAttributes<'article'>;
-const { class: className, id } = Astro.props;
+const { class: className, id, tabindex } = Astro.props;
 ---
 
-<article class:list={['wrapper region prose', className]} id={id}>
+<article
+  class:list={['wrapper region prose', className]}
+  id={id}
+  tabindex={tabindex}
+>
   <slot />
 </article>
