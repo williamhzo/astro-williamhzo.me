@@ -1,0 +1,71 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import PageMeta from '@components/seo/PageMeta.astro';
+import Article from '@components/Article.astro';
+import { DESIGNS } from '@data/inspiration';
+import CardLink from '@components/CardLink.astro';
+import Emoji from '@components/Emoji.astro';
+import { WORK } from '@data/work';
+---
+
+<BaseLayout>
+  <PageMeta title="Work" slot="meta" />
+
+  <Fragment slot="main">
+    <Article>
+      <h1>Work & inspiration</h1>
+
+      <p>
+        This is a showcase of some projects I've worked on, along with articles,
+        blogs and projects other greater minds than mine have made on the web. I
+        greatly value them for the inspiration and learning they provided — I'd
+        definitely recommend checking out the resources in the <a
+          href="#inspiration">inspiration section</a
+        > below.
+      </p>
+    </Article>
+
+    <Article>
+      <h2>Past projects</h2>
+
+      <p>
+        Some selected work and projects I've focused on. See something that you
+        like? Feel free to <a href="/contact">get in touch</a>.
+      </p>
+
+      <hr />
+
+      <p>
+        <em>
+          <Emoji emoji="🚧" label="construction sign" /> This section is very much
+          a work in progress, more items and details will be added very soon. Baby
+          steps!
+        </em>
+      </p>
+
+      <hr />
+
+      <ul role="list">
+        {
+          WORK.map(({ href, title, tags }) => (
+            <CardLink href={href} title={title} tags={tags} />
+          ))
+        }
+      </ul>
+    </Article>
+
+    <Article>
+      <h2 id="inspiration">Inspiring stuff</h2>
+
+      <p>
+        Pieces of the internet that inspire, provide some learning, or both — <em
+          >in no particular order</em
+        >.
+      </p>
+
+      <ul role="list">
+        {DESIGNS.map((item) => <CardLink {...item} />)}
+      </ul>
+    </Article>
+  </Fragment>
+</BaseLayout>
