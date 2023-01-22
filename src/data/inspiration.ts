@@ -40,6 +40,11 @@ export const DESIGNS = [
     tags: ['ui'],
   },
   {
+    title: 'henry.codes',
+    href: 'https://henry.codes/',
+    tags: ['typography'],
+  },
+  {
     title: 'uiw.tf',
     href: 'https://uiw.tf',
     tags: ['ui', 'tools'],

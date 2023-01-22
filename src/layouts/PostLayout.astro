@@ -78,6 +78,7 @@ const { title, publishedDate, description, noindex } = post.data;
   }
 
   /* FIXME: Not cascaded to blog post */
+  /* maybe using :where() to reduce specificity */
   /* ol > li + li,
   ul > li + li {
     margin-block-start: var(--space-s);
