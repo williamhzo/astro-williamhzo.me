@@ -5,6 +5,14 @@
   margin-block-start: var(--flow-space, var(--space-s-m));
 }
 
+.prose :is(pre, pre + *, figure, figure + *, h2, h3, h4, h5, h6) {
+  --flow-space: var(--space-l-xl);
+}
+
+.prose :is(h2 + *, h3 + *, h4 + *, h5 + *, h6 + *) {
+  --flow-space: var(--space-s);
+}
+
 .wrapper {
   width: clamp(16rem, 95vw, 75rem);
   margin-inline: auto;
@@ -16,16 +24,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: var(--repel-vertical-alignment, center);
+  align-items: center;
   gap: var(--gutter, var(--space-s-m));
 }
 
 .cluster {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: var(--cluster-direction, row);
-  justify-content: var(--cluster-horizontal-alignment, flex-start);
-  align-items: var(--cluster-vertical-alignment, center);
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
   gap: var(--gutter, var(--space-s-m));
 }
 
@@ -42,6 +50,20 @@
   color: var(--accent-color);
 }
 
+.external-link::after {
+  content: '(external link)';
+  background-image: url(/images/svg/arrow-top-right.svg);
+  background-position: 50% auto;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  text-indent: 1em;
+  white-space: nowrap;
+}
+
 /* TODO: Not used
 .bullet-list li + li {
   margin-block-start: var(--space-2xs);
@@ -54,6 +76,13 @@
   .bullet-list :is(ol, ul) {
     padding-inline-start: 0;
   }
+} */
+
+/* Not used */
+/* .object-fit-cover {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
 } */
 
 .sr-only {
