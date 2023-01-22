@@ -2,10 +2,7 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 import PageMeta from '@components/seo/PageMeta.astro';
 import Article from '@components/Article.astro';
-import { DESIGNS } from '@data/inspiration';
-import CardLink from '@components/CardLink.astro';
 import Emoji from '@components/Emoji.astro';
-import { WORK } from '@data/work';
 ---
 
 <BaseLayout>
@@ -13,24 +10,116 @@ import { WORK } from '@data/work';
 
   <Fragment slot="main">
     <Article>
-      <h1>Work & inspiration</h1>
+      <h1>Work</h1>
 
       <p>
-        This is a showcase of some projects I've worked on, along with articles,
-        blogs and projects other greater minds than mine have made on the web. I
-        greatly value them for the inspiration and learning they provided — I'd
-        definitely recommend checking out the resources in the <a
-          href="#inspiration">inspiration section</a
-        > below.
+        This is a showcase of some projects I've worked on. See something that
+        you like? Feel free to <a href="/contact">get in touch</a>.
       </p>
     </Article>
 
-    <Article>
-      <h2>Past projects</h2>
+    <Article class="project">
+      <header class="repel">
+        <h2>Mansa</h2>
+
+        <div class="meta">
+          <p>Fintech</p>
+          <p>Lead Frontend Engineer</p>
+          <time datetime="2020">2020 — 2022</time>
+        </div>
+      </header>
+
+      <hr />
 
       <p>
-        Some selected work and projects I've focused on. See something that you
-        like? Feel free to <a href="/contact">get in touch</a>.
+        Mansa is a French lending company for small-to-medium businesses (SMEs)
+        and independent workers.
+      </p>
+
+      <p>
+        I joined them as the first Frontend employee, implementing from scratch
+        the Frontend architecture, a shared custom Design-System, internal &
+        user-facing products, hired and onboarded a team of 6 full-time Frontend
+        Engineers.
+      </p>
+
+      <hr />
+
+      <h3>Stack</h3>
+
+      <p>
+        Full TypeScript codebase, the Frontend stack evolved around React and
+        Next.js, in a <a
+          href="https://martinfowler.com/bliki/DomainDrivenDesign.html"
+          >Domain Driven Design (DDD)</a
+        > architecture across the stack.
+      </p>
+
+      <h3>User Interface</h3>
+
+      <p>
+        The Design System shared component library followed the <a
+          href="https://atomicdesign.bradfrost.com/">Atomic Design</a
+        > methodology with visual testing and playground in <a
+          href="https://storybook.com/">Storybook</a
+        >.
+      </p>
+
+      <p>
+        Most documentation regarding the Design System was held in Figma, more
+        specifically regarding UI components and design tokens.
+      </p>
+
+      <p>
+        Most UI elements were based on <a href="https://www.radix-ui.com/"
+          >Radix</a
+        > headless primitives for accessibility and DX.
+      </p>
+
+      <h3>Data flow</h3>
+
+      <p>
+        <a href="https://tanstack.com/query/latest">TanStack Query</a> (previously
+        named React-Query) was used for fetching API data and synchronizing it, handling
+        cache invalidation/revalidation and mutations. Synchronous local state being
+        mainly handled by React's <code>useState()</code> and <code
+          >useContext()</code
+        >.
+      </p>
+
+      <p>
+        Form and payload validation was done with <a href="https://zod.dev/"
+          >Zod</a
+        >, to guarantee type-safety and runtime validation (TypeScript's static
+        type-checking not being enough to guarantee data sanity and prevent
+        bugs).
+      </p>
+
+      <h3>Testing</h3>
+
+      <p>
+        Working in Financial products requires confidence and a good amount of
+        testing. Unit Tests were done using <a href="https://jestjs.io/">Jest</a
+        > and <a href="https://testing-library.com/">Testing Library</a>.
+      </p>
+
+      <p>
+        Integration and end-to-end tests were made using <a
+          href="https://www.cypress.io/">Cypress</a
+        >, which was a very convenient tool to mock backend APIs and focus on
+        the Frontend flow, without having to spin the whole stack and
+        containers.
+      </p>
+
+      <h3>Production site</h3>
+
+      <p>
+        <a
+          href="https://getmansa.com"
+          class="external-link"
+          target="_blank"
+          rel="noopener">getmansa.com</a
+        >
       </p>
 
       <hr />
@@ -44,28 +133,28 @@ import { WORK } from '@data/work';
       </p>
 
       <hr />
-
-      <ul role="list">
-        {
-          WORK.map(({ href, title, tags }) => (
-            <CardLink href={href} title={title} tags={tags} />
-          ))
-        }
-      </ul>
-    </Article>
-
-    <Article>
-      <h2 id="inspiration">Inspiring stuff</h2>
-
-      <p>
-        Pieces of the internet that inspire, provide some learning, or both — <em
-          >in no particular order</em
-        >.
-      </p>
-
-      <ul role="list">
-        {DESIGNS.map((item) => <CardLink {...item} />)}
-      </ul>
     </Article>
   </Fragment>
 </BaseLayout>
+
+<style>
+  .project header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .meta {
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: 50em) {
+    .meta {
+      text-align: right;
+    }
+
+    .project header {
+      flex-direction: row;
+    }
+  }
+</style>

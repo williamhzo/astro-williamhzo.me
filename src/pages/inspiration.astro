@@ -1,0 +1,25 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import PageMeta from '@components/seo/PageMeta.astro';
+import Article from '@components/Article.astro';
+import { DESIGNS } from '@data/inspiration';
+import CardLink from '@components/CardLink.astro';
+---
+
+<BaseLayout>
+  <PageMeta title="Work" slot="meta" />
+
+  <Article slot="main">
+    <h1 id="inspiration">Inpiration</h1>
+
+    <p>
+      Pieces of the internet that inspire, provide some learning, or both — <em
+        >in no particular order</em
+      >.
+    </p>
+
+    <ul role="list">
+      {DESIGNS.map((item) => <CardLink {...item} />)}
+    </ul>
+  </Article>
+</BaseLayout>
