@@ -1,5 +1,6 @@
 ---
 import { SEO } from 'astro-seo';
+import { removeTrailingSlash } from '@utils/removeTrailingSlash.utils';
 
 type Props = {
   title?: string;
@@ -33,6 +34,11 @@ const openGraph = {
   url: 'https://williamhzo.me/',
   description: page.description,
 };
+
+const currentUrl = removeTrailingSlash(Astro.url.toString());
+
+// const socialImageUrl = `https://williamhzo.me${openGraph.image}`;
+const socialImageUrl = new URL(openGraph.image, currentUrl).toString();
 ---
 
 <!-- see https://github.com/jonasmerlin/astro-seo#readme. -->
@@ -45,10 +51,12 @@ const openGraph = {
     basic: {
       title: openGraph.title,
       type: openGraph.type,
-      image: openGraph.image,
+      image: socialImageUrl,
     },
     image: {
       alt: openGraph.alt,
+      height: 630,
+      width: 1200,
     },
   }}
   extend={{
@@ -85,7 +93,7 @@ const openGraph = {
     // extending meta tags
     meta: [
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'generator', content: 'astro-kit' },
+      { name: 'generator', content: 'Astro' },
       {
         name: 'theme-color',
         content: '#9EA3FA',
@@ -96,9 +104,12 @@ const openGraph = {
         content: '#5941F1',
         media: '(prefers-color-scheme: light)',
       },
-      { name: 'twitter:image', content: openGraph.image },
+      { name: 'twitter:image', content: socialImageUrl },
+      { name: 'twitter:image:alt', content: openGraph.alt },
       { name: 'twitter:title', content: openGraph.title },
       { name: 'twitter:description', content: openGraph.description },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:site', content: '@williamhzo' },
     ],
   }}
   twitter={{
