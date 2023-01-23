@@ -53,11 +53,6 @@ const socialImageUrl = new URL(openGraph.image, currentUrl).toString();
       type: openGraph.type,
       image: socialImageUrl,
     },
-    image: {
-      alt: openGraph.alt,
-      height: 630,
-      width: 1200,
-    },
   }}
   extend={{
     // extending link tags
@@ -104,8 +99,6 @@ const socialImageUrl = new URL(openGraph.image, currentUrl).toString();
         content: '#5941F1',
         media: '(prefers-color-scheme: light)',
       },
-      { name: 'twitter:image', content: socialImageUrl },
-      { name: 'twitter:image:alt', content: openGraph.alt },
       { name: 'twitter:title', content: openGraph.title },
       { name: 'twitter:description', content: openGraph.description },
       { name: 'twitter:card', content: 'summary_large_image' },
