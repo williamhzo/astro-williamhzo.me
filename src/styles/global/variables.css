@@ -1,7 +1,7 @@
 :root {
   /* Colors */
 
-  --color-base-light: hsl(0, 0%, 98%);
+  --color-base-light: hsl(0, 0%, 90%);
   --color-base-dark: hsl(251, 41%, 8%);
   --color-accent-dark: hsl(237, 90%, 80%);
   --color-accent-light: hsl(248, 86%, 60%);
