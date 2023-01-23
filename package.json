@@ -15,7 +15,7 @@
     "@astrojs/rss": "^2.0.0",
     "@astrojs/sitemap": "^1.0.0",
     "astro": "^1.9.2",
-    "astro-seo": "^0.6.1",
+    "astro-seo": "^0.7.0",
     "sanitize-html": "^2.8.1"
   },
   "devDependencies": {
