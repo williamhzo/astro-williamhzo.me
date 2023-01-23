@@ -51,6 +51,9 @@ const socialImageUrl = new URL(openGraph.image, currentUrl).toString();
       type: openGraph.type,
       image: socialImageUrl,
     },
+    image: {
+      alt: openGraph.alt,
+    },
   }}
   extend={{
     // extending link tags
