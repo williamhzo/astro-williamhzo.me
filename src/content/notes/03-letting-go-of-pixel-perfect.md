@@ -97,4 +97,4 @@ I don't consider media queries as a code smell per se, but in the name of contro
 
 They're a perfect example of trying to imperatively style every element in the UI, whereas CSS is designed to be declarative — Jeremy Keith puts it way better than I do in his [dedicated blog post](https://adactio.com/journal/18982).
 
-P.S.: quick note after re-reading this post: the reasons above are the very same reasons why Tailwind doesn't click for me, imperative vs declarative.
+Quick note after re-reading this post: the reasons above are the very same reasons why Tailwind doesn't really click for me, imperative vs declarative.

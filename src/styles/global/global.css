@@ -188,3 +188,13 @@ pre {
   padding: var(--space-2xs-xs);
   border-radius: var(--border-radius-sm);
 }
+
+::-moz-selection {
+  background: var(--accent-color);
+  color: var(--bg-color);
+}
+
+::selection {
+  background: var(--accent-color);
+  color: var(--bg-color);
+}
