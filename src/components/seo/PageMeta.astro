@@ -36,8 +36,6 @@ const openGraph = {
 };
 
 const currentUrl = removeTrailingSlash(Astro.url.toString());
-
-// const socialImageUrl = `https://williamhzo.me${openGraph.image}`;
 const socialImageUrl = new URL(openGraph.image, currentUrl).toString();
 ---
 
