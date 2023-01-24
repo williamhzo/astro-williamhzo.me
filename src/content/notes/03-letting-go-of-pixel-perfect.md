@@ -89,7 +89,7 @@ As the name states, (almost) all the basic layouts are covered and are easily co
 
 One of the key discoveries from [buildexcellentwebsit.es](https://buildexcellentwebsit.es/) is the amazing tool [Utopia](https://utopia.fyi/).
 
-Utopia allows you to generate CSS variables on fluid scales. You provide a target `font-size` for the smallest and largest viewports along with a [type scale](https://type-scale.com/), and it will generate for you all the intermediate sizes, thanks to the amazing [`clamp()`](https://developer.mozilla.org/en-US/docs/Web/CSS/clamp) CSS function.
+Utopia allows you to generate CSS variables on fluid scales. You provide a target `font-size` for the smallest and largest viewports along with a [type scale](https://type-scale.com/), and it will generate for you all the intermediate sizes, thanks to the powerful [`clamp()`](https://developer.mozilla.org/en-US/docs/Web/CSS/clamp) CSS function.
 
 ## Wrapping up
 
