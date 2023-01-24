@@ -13,7 +13,4 @@ export default defineConfig({
       wrap: false,
     },
   },
-  experimental: {
-    contentCollections: true,
-  },
 });

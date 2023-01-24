@@ -6,7 +6,10 @@ import { formatDate } from '@utils/dates.utils';
 import Article from '@components/Article.astro';
 
 // getting published posts and sorting them by decreasing published date
-const posts = await getCollection('notes', ({ data }) => data.publish === true);
+const posts = await getCollection(
+  'notes',
+  (post) => post.data.publish === true
+);
 const sortedPosts = [...posts].sort(
   (a, b) => b.data.publishedDate.getTime() - a.data.publishedDate.getTime()
 );
@@ -20,17 +23,17 @@ const sortedPosts = [...posts].sort(
 
     <ul role="list" class="flow posts-list">
       {
-        sortedPosts.map(({ data }) => (
+        sortedPosts.map((post) => (
           <li class="flow">
-            <a href={`/notes/${data.slug}`} rel="prefetch">
-              {data.title}
+            <a href={`/notes/${post.slug}`} rel="prefetch">
+              {post.data.title}
             </a>
 
             <div>
-              <time datetime={data.publishedDate.toISOString()}>
-                {formatDate(data.publishedDate)}
+              <time datetime={post.data.publishedDate.toISOString()}>
+                {formatDate(post.data.publishedDate)}
               </time>
-              <p class="post-description">{data.description}</p>
+              <p class="post-description">{post.data.description}</p>
             </div>
           </li>
         ))

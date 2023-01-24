@@ -1,3 +1,4 @@
+// import rss, { pagesGlobToRssItems } from '@astrojs/rss';
 import rss from '@astrojs/rss';
 import sanitizeHtml from 'sanitize-html';
 
@@ -18,5 +19,13 @@ export const get = () =>
       pubDate: post.frontmatter.publishedDate,
       content: sanitizeHtml(post.compiledContent()),
     })),
+    // items: pagesGlobToRssItems(
+    //   posts.map((post) => ({
+    //     link: post.frontmatter.canonicalUrl,
+    //     title: post.frontmatter.title,
+    //     pubDate: post.frontmatter.publishedDate,
+    //     content: sanitizeHtml(post.compiledContent()),
+    //   }))
+    // ),
     customData: `<language>en-gb</language>`,
   });
