@@ -16,7 +16,7 @@
 .wrapper {
   width: clamp(16rem, 95vw, 75rem);
   margin-inline: auto;
-  padding-inline: var(--gutter, 1rem);
+  padding-inline: var(--gutter, var(--space-s-m));
   position: relative;
 }
 
@@ -63,20 +63,6 @@
   text-indent: 1em;
   white-space: nowrap;
 }
-
-/* TODO: Not used
-.bullet-list li + li {
-  margin-block-start: var(--space-2xs);
-}
-.bullet-list :is(ol, ul) {
-  padding-inline-start: 1em;
-}
-
-@media (min-width: 50em) {
-  .bullet-list :is(ol, ul) {
-    padding-inline-start: 0;
-  }
-} */
 
 /* Not used */
 /* .object-fit-cover {
