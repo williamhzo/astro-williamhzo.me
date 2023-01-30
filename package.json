@@ -19,7 +19,7 @@
     "sanitize-html": "^2.8.1"
   },
   "devDependencies": {
-    "@typescript-eslint/parser": "^5.48.2",
+    "@typescript-eslint/parser": "^5.49.0",
     "eslint": "^8.33.0",
     "eslint-plugin-astro": "^0.23.0",
     "eslint-plugin-jsx-a11y": "^6.7.1"
