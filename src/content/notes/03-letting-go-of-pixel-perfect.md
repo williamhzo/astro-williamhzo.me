@@ -77,7 +77,7 @@ The solution to this lies in accepting not controlling every absolute pixel valu
 
 Instead of defining breakpoints on which to change the layout, we let the `flex` or `grid` algorithms do it for us, according to our input and the content they hold.
 
-Some amazing tools and methodologies exist nowadays to overcome this. I'll briefly talk about 2 of my favorite in the next sections.
+Some amazing tools and methodologies exist nowadays to achieve this. I'll briefly talk about 2 of my favorite in the next sections.
 
 ### Solving the fluid layout issue
 
