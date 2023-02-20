@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@astrojs/prefetch": "^0.1.2",
-    "@astrojs/rss": "^2.1.0",
+    "@astrojs/rss": "^2.1.1",
     "@astrojs/sitemap": "^1.0.1",
     "astro": "^2.0.10",
     "astro-seo": "^0.7.0",
