@@ -17,7 +17,7 @@
     "astro": "^2.6.3",
     "astro-seo": "^0.7.2",
     "markdown-it": "^13.0.1",
-    "sanitize-html": "^2.10.0"
+    "sanitize-html": "^2.11.0"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^5.59.6",
